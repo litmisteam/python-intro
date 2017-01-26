@@ -16,7 +16,7 @@ The installation process is fairly straight forward if it is even needed on your
 
 Before we move to the actual tutorial I thought it might be useful to list some of the language protocols that might seem foreign to new users \(as they did to me\).
 
-1. Indentation
+##### Indentation
 
 Python uses indentation for blocks, instead of curly praces. Both tabs and spaces are supported, but the standard indentation requires Python code to use four spaces.
 
@@ -29,7 +29,7 @@ if x == 1:
 
 The above code block illustrates the use of spaces in flow-control statements such as the 'if' statement. The bottom line here is that Python recognizes spacing similar to how HTML does and misplaced or misused spaces can be fatal to program execution.
 
-1. Variable Assignment
+##### Variable Assignment
 
 Variable definition is fairly straightforward in Python. Since it is a scripting language you can assign and reassign a variable as many times as you would like in your program. Simple operators can be executed on numbers and strings as you might expect, and Python also supports simultaneous variable assignment.
 
@@ -40,7 +40,7 @@ print(a, b)
 
 The above code would return 3, 4 as both of the variables were assigned at once.
 
-1. Looping
+##### Looping
 
 The last odd Python syntax we will cover is the variety of ways you can implement flow control. As an example I will use a 'while' loop with a set condition that after execution, will terminate to an 'else' statment.
 
