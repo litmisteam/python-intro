@@ -27,7 +27,9 @@ if x == 1:
     print("x is 1.")
 ```
 
-The above code block illustrates the use of spaces in flow-control statements such as the 'if' statement. The bottom line here is that Python recognizes spacing similar to how HTML does and misplaced or misused spaces can be fatal to program execution.
+The above code block illustrates the use of spaces in flow-control statements such as the 'if' statement. The bottom line here is that Python recognizes spacing similar to how HTML does and misplaced or misused spaces can be fatal to program execution. 
+
+You might also note that the above code segment illustrates the lack of termination characters \(; in java\). 
 
 ##### Variable Assignment
 
@@ -40,7 +42,9 @@ print(a, b)
 
 The above code would return 3, 4 as both of the variables were assigned at once.
 
-##### Looping
+Furthermore, variables are dynamically typed, meaning that Python has no type declarations and instead implies them itself. Python is strongly typed however, making variable assignment and modification an important aspect of code to still be aware of even without the direct type declarations. 
+
+##### Flow Control
 
 The last odd Python syntax we will cover is the variety of ways you can implement flow control. As an example I will use a 'while' loop with a set condition that after execution, will terminate to an 'else' statment.
 
@@ -52,6 +56,14 @@ while (count < 5):
 else:
     print("count value reached %d" %(count))
 ```
+
+##### Python Interpreter
+
+The Python interpreter allows you to run small pieces of code in the shell and to immediately see the results. To enter the Python interpreter simply type 'python' at which point you should be brought to a new line in the shell with a &gt;&gt;&gt; at the start of the line to indicate that you are in the Python interpreter. To exit simply type 'exit\(\)' or 'ctrl+c / cmd+d'. Below you will find an example of this as well as an illustration of some useful methods. ![](/assets/interpreter.PNG)Returned from the help\(int\) call above within the Python interpreter:![](/assets/interpreterHelpMethod.PNG)
+
+##### Functions
+
+Functions are defined using the keyword 'def' and are called as you would call a function in many other languages. ![](/assets/pythonFunction.PNG)
 
 
 
