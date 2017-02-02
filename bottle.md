@@ -6,13 +6,17 @@ In todays day and age frameworks provide developers with the certainty that they
 
 ##### Characteristics
 
-Bottle supports the use of clean and dynamic URLs through it's routing functions. Bottle is also compatable with many major template engines like Mako, Jinja2, and Cheetah to name a few. Form data, file uploads, cookies and other HTTP-related metadata is made convieniently accessable with the modules extensive metadata access methods. Bottle ships with a built-in HTTP development server supporting paste, fapws3, bjoern, gae, cherrypy or any WSGI capable HTTP server. 
+Bottle supports the use of clean and dynamic URLs through it's routing functions. Bottle is also compatable with many major template engines like Mako, Jinja2, and Cheetah to name a few. Form data, file uploads, cookies and other HTTP-related metadata is made convieniently accessable with the modules extensive metadata access methods. Bottle ships with a built-in HTTP development server supporting paste, fapws3, bjoern, gae, cherrypy or any WSGI capable HTTP server.
 
 ### Getting Started
 
 ##### Installation
 
-Bottle has no external library dependencies so all you need to do is download the bottle.py file into your project directory and start coding. The most stable version can be accessed via the 'pip install bottle' command in the shell prompt of your given system. 
+Bottle has no external library dependencies so all you need to do is download the bottle.py file into your project directory and start coding. The most stable version can be accessed via the 'pip install bottle' command in the shell prompt of your given system.
+
+```
+pip install bottle
+```
 
 
 
