@@ -2,7 +2,7 @@
 
 ## Setup a LITMIS Space
 
-Now that you know a little about Python it’s time to setup your lab on an IBM i in the cloud. Labs are conducted on [**Litmis Spaces**](https://kti.news/2iMWsjL)** Multi Tenant**; a service from Krengeltech to provide preconfigured open source environments on IBM i cloud instances.
+Now that you know a little about PASE it’s time to setup your lab on an IBM i in the cloud. Labs are conducted on [**Litmis Spaces**](https://kti.news/2iMWsjL)** Multi Tenant**; a service from Krengeltech to provide preconfigured open source environments on IBM i cloud instances.
 
 **In short, everything can be done through the browser - no need to install a source editor or shell client on your desktop. Happy day!**
 
@@ -18,7 +18,7 @@ Once logged in you can create a new space, as shown below.
 
 ![](https://litmis.gitbooks.io/pase-intro/content/assets/litmis_signup2.5.png)
 
-You will be presented with the below pop-up. Give a name to this space, enter the promo code of **BETA**, select the `minimal` radio button, and click the **Create** button.![](/assets/pythonFlavorLitmisSetup.png)Now you should see a new box on your page that represents your newly created Space \(demo picture space was named 'ExampleSpace' instead of 'pythonIntro' as shown in the above setup\).
+You will be presented with the below pop-up. Give a name to this space, enter the promo code of **BETA**, select the `minimal` radio button, and click the **Create** button.![](/assets/pythonFlavorLitmisSetup.png)Now you should see a new box on your page that represents your newly created Space \(demo picture Space was named 'ExampleSpace' instead of 'pythonIntro' as shown in the above setup\).
 
 ![](/assets/exampleLitmisWorkspacesPage.PNG)
 

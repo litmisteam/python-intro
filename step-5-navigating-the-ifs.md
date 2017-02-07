@@ -1,6 +1,6 @@
 # Navigating the IFS {#navigating-the-ifs}
 
-When you log in you are placed in a PASE shell and also into a directory in the IFS. Previously we used `pwd` to print the current working directory. Further, you can use the `ls` \(list\) command to display the contents of a directory.
+When you log in you are placed in a PASE shell and also into a directory in the IFS. Previously we used `pwd` to print the current working directory. You can also use the `ls` \(list\) command to display the contents of a directory.
 
 Try the `ls` command for yourself and you should see something like the below.
 
