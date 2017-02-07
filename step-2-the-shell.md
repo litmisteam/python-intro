@@ -1,16 +1,16 @@
 # The Shell {#the-shell}
 
-You access PASE using what’s called a _shell_. The [PASE](https://kti.news/pase-v73) shell is a lot like a 5250 Telnet session; it’s a program that takes your commands from the keyboard and hands them to the operating system to perform their associated action. It is also known as a CLI \(\*C\*ommand \*L\*ine \*I\*nterface\).
+You access PASE using what’s called a _shell_. The [PASE](https://kti.news/pase-v73) shell is a lot like a 5250 Telnet session; it’s a program that takes your commands from the keyboard and hands them to the operating system to perform their associated action. It is also known as a CLI \(Command Line Interface\).
 
-By default PASE uses the Korn Shell \(aka `ksh`\). One way you can enter into a PASE Korn Shell via `CALL QP2TERM` from a 5250 Telnet session, as shown below.
+By default PASE uses the Korn Shell \(aka `ksh`\). One way you can enter into a PASE Korn Shell is via `CALL QP2TERM` from a 5250 Telnet session, as shown below.
 
 ![](https://litmis.gitbooks.io/pase-intro/content/assets/pase_call_qp2term1.png)
 
-Figure 1. 
+Figure 1.
 
 **CALL QP2TERM from a 5250 Telnet Session**
 
-The `pwd` command has been keyed in and the enter key pressed. Under the covers the `pwd` C program is invoked, does its thing, and returns output back to your shell’s screen. You can see the Linux implementation of `pwd`[here](https://kti.news/pase-pwd).
+The `pwd` command has been keyed in and the enter key pressed. Under the covers the `pwd` C program is invoked, does its thing, and returns output back to your shell’s screen. 
 
 ## QP2TERM and QShell {#_qp2term_and_qshell}
 

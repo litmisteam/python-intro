@@ -32,7 +32,7 @@ There are four buttons which constitute actions you can take with your Space. Th
 
 * **Delete Space. WARNING!** If you select this option and the subsequent warning prompt, your Space will be deleted. This **CANNOT** be undone.
 
-##  {#_please_proceed_to_the_next_step}
+## Please proceed to the next step. {#_please_proceed_to_the_next_step}
 
 
 
