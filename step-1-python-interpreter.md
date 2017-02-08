@@ -6,7 +6,7 @@ It should first be noted that Python utilizes an interpreter to render it's code
 
 The Python interpreter allows you to run small pieces of code in the shell and to immediately see the results. To enter the Python interpreter simply type 'python' at which point you should be brought to a new line in the shell with a &gt;&gt;&gt; at the start of the line to indicate that you are in the Python interpreter \(the '&gt;&gt;&gt;' indicator can even be personalized!\). To exit simply type 'exit\(\)' or 'ctrl+c / cmd+d'.
 
-Below, you can jump right into a brief introduction on the Python interpreter if you are so inclined to do so! If your comfortable with Python at this point, you might find it more useful to jump ahead to Step 2 and use this Step as well as the Python Overview as references for anything you might find unfamiliar with moving forward. 
+Below, you can jump right into a brief introduction on the Python interpreter if you are so inclined to do so! If your comfortable with Python at this point, you might find it more useful to jump ahead to Step 2 and use this Step as well as the Python Overview as references for anything you might find unfamiliar with moving forward.
 
 ### Getting Started
 
@@ -15,10 +15,6 @@ To enter the Python interpreter you simply need to enter "python3" \(to use the 
 ![](/assets/startingPythonInterpreter.PNG)
 
 Above you see the shell command 'python3 --version' that behaves predictably, listing our current working version of Python. You can use this with 'python --version' or any other module to determine what version your system currently has in place.
-
-```
- ![](/assets/PythonInterpreter1.PNG)
-```
 
 The 'python3' entry into the shell provided some details regarding our current distribution of Python \(similar but more in depth than the --version commands return\) and also started the Python interpreter. Below that you can see some simple arithmetic being handled by the interpreter as well as an in-line comment signaled by the '\#' sign.
 
