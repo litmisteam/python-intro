@@ -6,15 +6,19 @@ It should first be noted that Python utilizes an interpreter to render it's code
 
 The Python interpreter allows you to run small pieces of code in the shell and to immediately see the results. To enter the Python interpreter simply type 'python' at which point you should be brought to a new line in the shell with a &gt;&gt;&gt; at the start of the line to indicate that you are in the Python interpreter \(the '&gt;&gt;&gt;' indicator can even be personalized!\). To exit simply type 'exit\(\)' or 'ctrl+c / cmd+d'.
 
+Below, you can jump right into a brief introduction on the Python interpreter if you are so inclined to do so! If your comfortable with Python at this point, you might find it more useful to jump ahead to Step 2 and use this Step as well as the Python Overview as references for anything you might find unfamiliar with moving forward. 
+
 ### Getting Started
 
 To enter the Python interpreter you simply need to enter "python3" \(to use the Python 3.\* distribution\). From there, as stated above, you can enter individual lines of valid Python code that the interpreter will then make sense of in real time, allowing you to try out single-line commands in a stress free environment and get the results from those commands immediately.
 
 ![](/assets/startingPythonInterpreter.PNG)
 
-Above you see the shell command 'python3 --version' that behaves predictably, listing our current working version of Python. You can use this with 'python --version' or any other module to determine what version your system currently has in place. 
+Above you see the shell command 'python3 --version' that behaves predictably, listing our current working version of Python. You can use this with 'python --version' or any other module to determine what version your system currently has in place.
 
-     ![](/assets/PythonInterpreter1.PNG)
+```
+ ![](/assets/PythonInterpreter1.PNG)
+```
 
 The 'python3' entry into the shell provided some details regarding our current distribution of Python \(similar but more in depth than the --version commands return\) and also started the Python interpreter. Below that you can see some simple arithmetic being handled by the interpreter as well as an in-line comment signaled by the '\#' sign.
 
@@ -40,5 +44,5 @@ One of my final examples of the Python interpreter goes a little bit more in dep
 
 Moving into the interpreter, you can see that I used both 'import yahoofinance' and 'from yahoofinance import \*' to inform the interpreter that I would be using commands from that module. However, you will not need to run both of these commands. In fact, it is not recommended to do so! By simply importing all of a module you could accidentaly overwrite something in a different imported module that you did not wish to in your runtime environment. You should specify the methods that you plan to make use of from the import. For example, to improve my code above one would go with 'from yahoo\_finance import Share' instead of the lines mentioned previously.
 
-Within the interpreter you then see me utilize the yahoo\_finance library to fetch a Company Name and Price from the web and utilize it directly in the application. Pretty cool huh? There are many robust libraries written for Python that are freely distributed making Python an extremely powerful and developer friendly language. This also means that the more people that use Python, the more tools you will have access too. Hopefully at this point some of the questions you had regarding Python have been answered. On the other hand, if your still unsure about what is happening in any of the above examples or just want more information about Python and how it works, meandering to the online Python documentation [here](https://docs.python.org/3.6/contents.html "Python Documentation") would be my suggestion. You can also check out the Python References section for more information! 
+Within the interpreter you then see me utilize the yahoo\_finance library to fetch a Company Name and Price from the web and utilize it directly in the application. Pretty cool huh? There are many robust libraries written for Python that are freely distributed making Python an extremely powerful and developer friendly language. This also means that the more people that use Python, the more tools you will have access too. Hopefully at this point some of the questions you had regarding Python have been answered. On the other hand, if your still unsure about what is happening in any of the above examples or just want more information about Python and how it works, meandering to the online Python documentation [here](https://docs.python.org/3.6/contents.html "Python Documentation") would be my suggestion. You can also check out the Python References section for more information!
 
