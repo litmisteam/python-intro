@@ -17,7 +17,8 @@
 
 ## Python Development
 
-* [Python Basics](python-basics.md)
+* [Step 1: Python Interpreter](step-1-python-interpreter.md)
+* [Python Overview](python-basics.md)
 * [Bottle Tutorial](bottle.md)
 * [Python References](python-references.md)
 

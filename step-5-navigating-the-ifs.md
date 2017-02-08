@@ -51,8 +51,6 @@ QOpenSys  dev       home      opt       tmp       var
 bin       etc       lib       sbin      usr
 ```
 
-**&lt;WORK IN PROGRESS. STAY TUNED&gt;**
-
 ## Please proceed to the next step. {#_please_proceed_to_the_next_step}
 
 
