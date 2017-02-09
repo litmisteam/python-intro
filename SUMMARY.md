@@ -19,6 +19,7 @@
 
 * [Python Overview](python-basics.md)
 * [Step 1: Python Interpreter](step-1-python-interpreter.md)
+* [Step 2: Learn Python with Bottle](step-2-python.md)
 * [Bottle Tutorial](bottle.md)
 * [Python References](python-references.md)
 
