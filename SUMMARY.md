@@ -1,8 +1,8 @@
 # Summary
 
-## Introduction to Python on IBM i
+## Intro to Python on IBM i
 
-* [Introducttion](README.md)
+* [Introduction](README.md)
 
 ## PASE
 
