@@ -39,7 +39,7 @@ yahoo-finance (1.4.0)
 [usr3ouav@SPACES]~% 
 ```
 
-To set up our bottle project we can take a number of routes. We could either enter a Python interpreter and run a short segment of code to see it in action, or we could put this short piece of code in a file and execute the file through the shell interface. Furthermore, we can either go to the code editor to create the files we will need, or we can do so throught he shell. First, I will illustrate how we can create the file we need to run with shell commands, and then I'll demonstrate an alternative via the code editor. 
+To set up our bottle project we can take a number of routes. We could either enter a Python interpreter and run a short segment of code to see it in action, or we could put this short piece of code in a file and execute the file through the shell interface. Furthermore, we can either go to the code editor to create the files we will need, or we can do so through the shell. First, I will illustrate how we can create the file we need to run with shell commands, and then I'll demonstrate an alternative via the code editor.
 
 ```
 [usr3ouav@SPACES]~% ls
@@ -57,9 +57,9 @@ firstBottleExample.py
 [usr3ouav@SPACES]~/bottleLearning% 
 ```
 
-To break down the above we need to assess what all of the shell commands were. First, I entered 'ls' to list the contents of the current working directory. I then entered 'mkdir' in order to create a new directory inside my current directory \(which happened to be my home directory\). The second 'ls' command was sent to illustrate the completion of the 'mkdir' command \(notice the 'bottleLearning' listing under the second 'ls' command\). Once the new directory was created, I used the 'cd' command to change my working directory to the newly created 'bottleLearning' directory. From that point I listed the contents, which displayed nothing, and then sent the 'touch' command which creates a file with the associated name \(firstBottleExample.py in this case\).
+To break down the above we need to assess what all of the shell commands were. First, 'ls' was entered to list the contents of the current working directory. The next command, 'mkdir', created a new directory inside the current directory \(which should be the home directory on startup\). The second 'ls' command was sent to illustrate the completion of the 'mkdir' command \(notice the 'bottleLearning' listing under this command\). Once the new directory was created, the 'cd' command was issued to change the working directory to the newly created 'bottleLearning' directory. From that point the contents were listed using the 'ls' command, which displayed nothing, and at which point the file we came to create was finally produced with the 'touch firstBottleExample.py' command.
 
-At this point you can enter your file system through the litmis spaces homepage:
+At this point you can enter the code editor through the litmis spaces homepage:
 
 ![](/assets/codeEditor.png)
 
@@ -71,7 +71,7 @@ You might not be able to see the file we supposedly created in the shell prompt 
 
 ![](/assets/refreshCodeEditor.png)
 
-Now that your workstation is refreshed you can go ahead and begin editing the file we created by selecting the down arrow on the 'bottleLearning' folder that contains our desired file and double clicking on the file to pull it up in the editor. 
+Now that your workstation is refreshed you can go ahead and begin editing the file we created by selecting the down arrow on the 'bottleLearning' folder that contains our desired file and double clicking on the file to pull it up in the editor.
 
 ![](/assets/selectingFileInEditor.png)
 
@@ -87,7 +87,7 @@ def index(name):
 run(host='localhost', port=8080)
 ```
 
-These lines represent one of the most basic bottle structures you can engineer and when run should start a server on the given host at the provided port number that serves HTTP GET requests with the appropriate routing as defined in the '@route' attribute parameters. However, for our purposes we are going to need to update the host and port parameters in the run command with our Litmis Space information. To find this information navigate to the Litmis Spaces workspaces page and select the 'More Info' icon.
+These lines represent one of the most basic bottle structures you can engineer, and when run, should start the built in Bottle server on the given host at the provided port number that serves HTTP GET requests with the appropriate routing as defined in the '@route' attribute parameters. However, for our purposes we are going to need to update the host and port parameters in the run command with our Litmis Space information. To find this information navigate to the Litmis Spaces workspaces page and select the 'More Info' icon.
 
 ![](/assets/informationIcon.png)
 
@@ -122,9 +122,9 @@ Listening on http://spaces.litmis.com:62368/
 Hit Ctrl-C to quit.
 ```
 
-I used the 'ls' command again to see if I was in the correct directory. Since I restarted my console between our last console use and this one, I was no longer in the 'bottleLearning' directory so I swictched my directory accordingly with the 'cd' \(change directory\) command. I then listed that directories contents to make sure the file i was looking for was present and so that I had a text display of the exact filename to avoid confusion. The code in the 'firstBottleExample.py' is then executed using the 'python3' command to invoke the interpreter. It then produces the readout shown. Copy and paste the URL listed at the 'Listening on http://...' line into a browser to view the servers response based on our code entry! 
+Restarting the console resets your directory setting so using an 'ls' command to determine your wherabouts in the IFS is a good way to start any shell entry. Using the 'cd' command to change directories to the 'bottleLearning' directory and using 'ls' to list it's contents is a way to display a text readout of the filename we are trying to use so that we can avoid any syntax errors in our execute statement. Once in the correct directory you can then issue the 'python3 firstBottleExample.py' command as shown to run the interpreter and execute the requested file. This runs the code we saved in the 'firstBottleExample.py' file starting a server at the requested host and port number as outlined in the file which produces the output shown. Copy and paste the URL listed at the 'Listening on http://...' line into a browser to view the servers response based on our code entry!
 
-If your unfamiliar with the routing we defined, here are some examples of valid routes this code will accept: 
+If your unfamiliar with the routing we defined, here are some examples of valid routes this code will accept:
 
 ![](/assets/routingInBrowserExample.png)
 
