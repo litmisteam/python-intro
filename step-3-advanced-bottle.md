@@ -96,9 +96,9 @@ def chooseFile(filename):
 run(host='spaces.litmis.com', port=62368)
 ```
 
-The above code illustrates a few new topics for us. The first noteable piece to take from this example is that one callback can have more than one route bound to it \(with the @route\(\) decorator\). 
+The above code illustrates a few new topics for us. The first noteable piece to take from this example is that one callback can have more than one route bound to it \(with the @route\(\) decorator\).
 
-\*While creating the code for this section, I noticed that when adding multiple routes, you need to have the shorter route specified first, followed by any longer routes as shown above. 
+\*While creating the code for this section, I noticed that when adding multiple routes, you need to have the shorter route specified first, followed by any longer routes as shown above.
 
 You might also have noticed that Bottle even allows us to add filters to our wildcards. It natively supports int, float, path and regex filters and even allows you to define and use your own filters. Above, a filter is used on the &lt;filename:path&gt; wildcard where we specify that the value entered into the wildcard extension must be a path, which matches all characters including the slash character and can be used to match more than one path segment.
 
@@ -135,11 +135,11 @@ def do_login():
         return "<p>Your login information was correct.</p>"
     else:
         return "<p>Login failed.</p>"
-        
+
 run(host='spaces.litmis.com', port=62368)
 ```
 
-This code block illustrates the different way you can use the routing mechanisms in Bottle. Notice the '\#' comment lines that define alternative route decorators for the non-commented versions provided. If you are unfamiliar with some of the syntax here, that is okay. What you should really be taking from this example is the use of the @get and @post route decorators and what they imply. In the @get block, we see an odd return value starting with tripple quotes, which is simply an HTML form embedded in our python code with the ''' and '''' tags surrounding it. This form takes a Username and Password as input, and when the input value is submitted, it generates the @post response. 
+This code block illustrates the different way you can use the routing mechanisms in Bottle. Notice the '\#' comment lines that define alternative route decorators for the non-commented versions provided. If you are unfamiliar with some of the syntax here, that is okay. What you should really be taking from this example is the use of the @get and @post route decorators and what they imply. In the @get block, we see an odd return value starting with tripple quotes, which is simply an HTML form embedded in our python code with the ''' and '''' tags surrounding it. This form takes a Username and Password as input, and when the input value is submitted, it generates the @post response.
 
 Once the @get values are input, the @post request responds due to the 'method="post"' declaration in the HTML form. To retrieve the values from the form the 'request.forms.get\(\)' method is used with the appropriate input names provided as parameters. This finds the form values entered by the user and extracts them from the form.
 
@@ -151,7 +151,7 @@ What response do you think you will recieve when fill in the form and submit it 
 
 ![](/assets/undefinedMethodResponseError.png)
 
-We recieve this response because we never defined the check\_login\(username, password\) function! Lets change a few things and see if we can get a response. 
+We recieve this response because we never defined the check\_login\(username, password\) function! Lets change a few things and see if we can get a response.
 
 ```
 from bottle import get, post, request, run # or route
@@ -184,9 +184,9 @@ def check_login(user, pwrd):
 run(host='spaces.litmis.com', port=62368, reloader = True, debug = True)
 ```
 
-The above code demonstrates a few things that I think are worth noting. First, this is our first example of a user defined method interacting with the methods within our given route decorators callback. The 'check\_login\(user, pwrd\)' function defnition will respond affirmatively whenever a user with the name of Eric enters the site, which in practice is likely only appreciated by Eric's \(me\), but does a good job illustrating the use of user defined methods within a callback. 
+The above code demonstrates a few things that I think are worth noting. For instance, this is our first example of a user defined method interacting with the methods within our given route decorators callback. The 'check\_login\(user, pwrd\)' function defnition will respond affirmatively whenever a user with the name of Eric enters the site, which in practice is likely only appreciated by Eric's \(me\), but does a good job illustrating the use of user defined methods within a callback.
 
-However, this was not the only other change, I also added the 'reloader = True' and 'debug = True' lines in the run statement. The reloader enables our server to self deploy itself if serving a piece of code that we make changes to and then save over. This enhances the responsiveness of the application during application development and can save us a great deal of time during the error checking phase of our application launch. The setting the 'debug' variable to true makes Bottle much more verbose in response to error occurances. It also disables some optimizations that might get in your way during the development process and warns you about possible misconfigurations. 
+However, this was not the only other change, I also added the 'reloader = True' and 'debug = True' lines in the run statement. The reloader enables our server to self deploy itself if serving a piece of code that we make changes to and then save over. This enhances the responsiveness of the application during application development and can save us a great deal of time during the error checking phase of our application launch. The setting the 'debug' variable to true makes Bottle much more verbose in response to error occurances. It also disables some optimizations that might get in your way during the development process and warns you about possible misconfigurations.
 
 Running the above code will produce the following output if you enter 'Eric' as the username. Because of the form values provided, Google Chrome will even respond and ask you to save your login information for this site if your using that particular browser. Though I haven't tested them, I would assume other browsers respond in kind.
 
