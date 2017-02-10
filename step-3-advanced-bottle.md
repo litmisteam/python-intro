@@ -108,6 +108,27 @@ Copy and paste the code snippet from above that includes the second routing deco
 
 ![](/assets/secondRouteBottleRouting.png)
 
+Before we move beyond static files and wildcards, I thought it worth illustrating one more out of the box construct of Bottle, the forced file download. Enter the code below and observe the interactions when the proper URL is sent to the browser.
+
+```
+from bottle import route, run, template, static_file
+
+# ... wildcard filter being used below
+@route('/<filename:path>')
+@route('/selectFile/<filename:path>')
+def chooseFile(filename):
+    return static_file(filename, root='/home/USR3OUAV/Templates/')
+
+# ... forced file download illustrated below. If you don't specify the filename it shouldn't force the download but instead should prompt the user regarding whether they would like to or not.
+@route('/download/<filename:path>')
+def download(filename):
+    return static_file(filename, root='/home/USR3OUAV/Templates/', download=filename)
+
+run(host='spaces.litmis.com', port=62368)
+```
+
+
+
 Now that we have touched on some of the basic principles behind the routing mechanism of Bottle, its time to take a deeper look at HTTP request methods and their interaction with the Bottle routing notation.
 
 The HTTP protocol defines several methods for different response tasks. In botttle, GET is the default for all routes with no other specified method. To handle other methods we need to add a method keyword to the route\(\) decorator or use one of the alternative decorators: get\(\), post\(\), put\(\), delete\(\), patch\(\).
