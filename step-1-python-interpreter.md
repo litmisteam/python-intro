@@ -4,7 +4,7 @@
 
 It should first be noted that Python utilizes an interpreter to render it's code into machine readable instructions, not a compiler. An interpreter reads in a program line by line, executing each line in order, unlike a compiler that translates the contents of the program before execution. I thought it useful to take a moment and explain the difference between the two translators as the rest of this section utilizes the Python interpreter to run simple Python commands, which can be confusing to individuals accustomed to a compiler for their code of choice.
 
-The Python interpreter allows you to run small pieces of code in the shell and to immediately see the results. To enter the Python interpreter simply type 'python' at which point you should be brought to a new line in the shell with a &gt;&gt;&gt; at the start of the line to indicate that you are in the Python interpreter \(the '&gt;&gt;&gt;' indicator can even be personalized!\). To exit simply type 'exit\(\)' or 'ctrl+c / cmd+d'.
+The Python interpreter allows you to run small pieces of code in the shell and to immediately see the results. To enter the Python interpreter simply type 'python3' at which point you should be brought to a new line in the shell with a &gt;&gt;&gt; at the start of the line to indicate that you are in the Python interpreter \(the '&gt;&gt;&gt;' indicator can even be personalized!\). To exit simply type 'exit\(\)' or 'ctrl+c / cmd+d'.
 
 Below, you can jump right into a brief introduction on the Python interpreter if you are so inclined to do so! If your comfortable with Python at this point, you might find it more useful to jump ahead to Step 2 and use this Step as well as the Python Overview as references for anything you might find unfamiliar with moving forward.
 
@@ -162,6 +162,8 @@ General Options:
                               Don't periodically check PyPI to determine whether a new version of pip is available for download. Implied with
                               --no-index.
 ```
+
+## Please proceed to the next step. {#_please_proceed_to_the_next_step}
 
 
 

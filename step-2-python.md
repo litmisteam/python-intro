@@ -45,7 +45,7 @@ yahoo-finance (1.4.0)
 [usr3ouav@SPACES]~% 
 ```
 
-To set up our bottle project we can take a number of routes. We could either enter a Python interpreter and run a short segment of code to see it in action, or we could put this short piece of code in a file and execute the file through the shell interface. Furthermore, we can either go to the code editor to create the files we will need, or we can do so through the shell. First, I will illustrate how we can create the file we need to run with shell commands, and then I'll demonstrate an alternative via the code editor.
+To set up our bottle project we can take a number of routes. We could either enter a Python interpreter and run a short segment of code to see it in action, or we could put this short piece of code in a file and execute the file through the shell interface. Furthermore, we can either go to the code editor to create the files we will need, or we can do so through the shell. First, I will illustrate how we can create the file we need to run with shell commands, and then I'll demonstrate an alternative via the code editor. Enter the following commands in your shell interface and review the responses.
 
 ```
 [usr3ouav@SPACES]~% ls
@@ -63,7 +63,7 @@ firstBottleExample.py
 [usr3ouav@SPACES]~/bottleLearning% 
 ```
 
-To break down the above we need to assess what all of the shell commands were. First, 'ls' was entered to list the contents of the current working directory. The next command, 'mkdir', created a new directory inside the current directory \(which should be the home directory on startup\). The second 'ls' command was sent to illustrate the completion of the 'mkdir' command \(notice the 'bottleLearning' listing under this command\). Once the new directory was created, the 'cd' command was issued to change the working directory to the newly created 'bottleLearning' directory. From that point the contents were listed using the 'ls' command, which displayed nothing, and at which point the file we came to create was finally produced with the 'touch firstBottleExample.py' command.
+To break down the above we need to assess what all of the shell commands were. First, 'ls' was entered to list the contents of the current working directory. The next command, 'mkdir', created a new directory inside the current directory \(which should be the home directory on startup\). The second 'ls' command was sent to illustrate the completion of the 'mkdir' command \(notice the 'bottleLearning' listing under this command\). Once the new directory was created, the 'cd' command was issued to change the working directory to the newly created 'bottleLearning' directory. From that point the contents were listed using the 'ls' command, which displayed nothing, followed by the touch command, which generated the file we set out to create in the first place \('firstBottleExample.py'\).
 
 At this point you can enter the code editor through the litmis spaces homepage:
 
@@ -73,15 +73,15 @@ Your code editor should look something like this:
 
 ![](/assets/codeEditorScreen.png)
 
-You might not be able to see the file we supposedly created in the shell prompt right away. To view this file you may need to refresh your workstation by right clicking on your username and selecting refresh as shown below:
+You might not be able to see the file we supposedly created in the shell prompt above. To view this file you may need to refresh your workstation by right clicking on your username and selecting refresh as shown below:
 
 ![](/assets/refreshCodeEditor.png)
 
-Now that your workstation is refreshed you can go ahead and begin editing the file we created by selecting the down arrow on the 'bottleLearning' folder that contains our desired file and double clicking on the file to pull it up in the editor.
+Now that your workstation is refreshed, you can go ahead and begin editing the file we created by selecting the down arrow on the 'bottleLearning' folder that contains our desired file and double clicking on the file to pull it up in the editor.
 
 ![](/assets/selectingFileInEditor.png)
 
-From here we are ready to begin editing our file. Enter the following lines of code into your 'firstBottleExample.py' file:
+At this point we are ready to begin editing our file. Enter the following lines of code into your 'firstBottleExample.py' file:
 
 ```
 from bottle import route, run, template
@@ -93,7 +93,7 @@ def index(name):
 run(host='localhost', port=8080)
 ```
 
-These lines represent one of the most basic bottle structures you can engineer, and when run, should start the built in Bottle server on the given host at the provided port number that serves HTTP GET requests with the appropriate routing as defined in the '@route' attribute parameters. However, for our purposes we are going to need to update the host and port parameters in the run command with our Litmis Space information. To find this information navigate to the Litmis Spaces workspaces page and select the 'More Info' icon.
+These lines represent one of the most basic bottle structures you can engineer, and when run, should start the built in Bottle server on the given host at the provided port number that serves HTTP GET requests with the appropriate routing as defined in the '@route' attribute parameters. However, for our purposes we are going to need to update the host and port parameters in the run command with our personal Litmis Space information. To find this information navigate to the Litmis Spaces workspaces page and select the 'More Info' icon.
 
 ![](/assets/informationIcon.png)
 
@@ -128,7 +128,7 @@ Listening on http://spaces.litmis.com:62368/
 Hit Ctrl-C to quit.
 ```
 
-Restarting the console resets your directory setting so using an 'ls' command to determine your whereabouts in the IFS is a good way to start any shell entry. Using the 'cd' command to change directories to the 'bottleLearning' directory and using 'ls' to list it's contents is a way to display a text readout of the filename we are trying to use so that we can avoid any syntax errors in our execution statement. Once in the correct directory you can then issue the 'python3 firstBottleExample.py' command as shown to run the interpreter and execute the files contents. This runs the code we saved in the 'firstBottleExample.py' file starting a server at the requested host and port number as outlined in the file which produces the output shown. To stop the server, press 'ctrl-c' from inside the shell interface. Copy and paste the URL listed at the 'Listening on http://...' line into a browser to view the server response based on our code entry!
+Restarting the console resets your directory setting so using an 'ls' command to determine your whereabouts in the IFS is a good way to start any shell entry. Using the 'cd' command to change directories to the 'bottleLearning' directory and using 'ls' to list it's contents is a way to display a text readout of the filename we are trying to use so that we can avoid any syntax errors in our execution statement. Once in the correct directory you can then issue the 'python3 firstBottleExample.py' command as shown to run the interpreter and execute the file contents. This runs the code we saved in the 'firstBottleExample.py' file, starting a server at the requested host and port number as outlined in the file, which produces the output shown. To stop the server, press 'ctrl-c' from inside the shell interface. Copy and paste the URL listed at the 'Listening on http://...' line into a browser to view the server response based on our code entry!
 
 If your unfamiliar with the routing we defined, here are some examples of valid routes this code will accept:
 
@@ -137,4 +137,8 @@ If your unfamiliar with the routing we defined, here are some examples of valid 
 ![](/assets/firefoxRoutingExampleWithArrows.png)
 
 Simply enter the host name, port address and the proper routing configuration and you should see a response in a browser based on code that you just entered! Congratulations on your fist webpage using Python's Bottle module! Move on to Step 3 for more advanced Bottle topics and examples or skip ahead to a different topic if you so choose to!
+
+## Please proceed to the next step. {#_please_proceed_to_the_next_step}
+
+
 
