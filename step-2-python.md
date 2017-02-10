@@ -2,6 +2,12 @@
 
 While using the interpreter can open up a range of resources for Python development and learning the general aspects of the language, some would argue that jumping right in and making use of one of the many public libraries avaliable to Python users doos a better job illustrating the power of the language. [Bottle](https://bottlepy.org/docs/dev/ "See the Bottle documentation") is a fast, simple and lightweight WSGI micro web-framework for Python distributed as a single file module with no dependiencies other than the Python Standard Library, making it a perfect candidate to illustrate the power behind Python and why it's inclusion into the PASE environment is so monumental.
 
+#### Characteristics
+
+Bottle supports the use of clean and dynamic URLs through it's routing functions. Bottle is also compatable with many major template engines like Mako, Jinja2, and Cheetah to name a few. Form data, file uploads, cookies and other HTTP-related metadata is made convieniently accessable with Bottle's extensive metadata access methods. Bottle ships with a built-in HTTP development server supporting paste, fapws3, bjoern, gae, cherrypy or any WSGI capable HTTP server.
+
+#### Getting Started
+
 To get started, enter the shell interface from the workspaces page of your litmis space. Submit the following 'pip' command and review the response, it should look something like this:
 
 ```
@@ -122,7 +128,7 @@ Listening on http://spaces.litmis.com:62368/
 Hit Ctrl-C to quit.
 ```
 
-Restarting the console resets your directory setting so using an 'ls' command to determine your wherabouts in the IFS is a good way to start any shell entry. Using the 'cd' command to change directories to the 'bottleLearning' directory and using 'ls' to list it's contents is a way to display a text readout of the filename we are trying to use so that we can avoid any syntax errors in our execute statement. Once in the correct directory you can then issue the 'python3 firstBottleExample.py' command as shown to run the interpreter and execute the requested file. This runs the code we saved in the 'firstBottleExample.py' file starting a server at the requested host and port number as outlined in the file which produces the output shown. Copy and paste the URL listed at the 'Listening on http://...' line into a browser to view the servers response based on our code entry!
+Restarting the console resets your directory setting so using an 'ls' command to determine your whereabouts in the IFS is a good way to start any shell entry. Using the 'cd' command to change directories to the 'bottleLearning' directory and using 'ls' to list it's contents is a way to display a text readout of the filename we are trying to use so that we can avoid any syntax errors in our execution statement. Once in the correct directory you can then issue the 'python3 firstBottleExample.py' command as shown to run the interpreter and execute the files contents. This runs the code we saved in the 'firstBottleExample.py' file starting a server at the requested host and port number as outlined in the file which produces the output shown. To stop the server, press 'ctrl-c' from inside the shell interface. Copy and paste the URL listed at the 'Listening on http://...' line into a browser to view the server response based on our code entry!
 
 If your unfamiliar with the routing we defined, here are some examples of valid routes this code will accept:
 

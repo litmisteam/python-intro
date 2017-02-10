@@ -6,11 +6,11 @@ CodeEval, an exclusive community of over 69,000 competetive developers has asses
 
 With such a thriving community, it's hard to come up with a reason not to get on the Python bandwagon. It's recent integration to the IBM i platform furthers the existing incentive, meaning its never been a better time to read ahead and begin your Python journey!
 
-### Overview:
+#### Overview:
 
 Python is a high level scripting language with object oriented features. Python offers more structure and support for large programs than shell scripts or batch files can offer while remaining a simple to use programming language. In fact, with high-level data types built in \(flexible arrays and dictionaries\) Python is actually considered a very-high-level-language. Allowing you to split your program into modules that can be reused in other Python programs greatly expands the language's inherent capabilities. Things like file I/O, system calls, sockets and even interfaces to graphical user interface toolkits can be modularized to reduce development time.  Furthermore, Python is both an interpreted language and extensible. Being an interpreted language means that no compilation and linking is necessary making it easier to experiment with features of the language. Extensibility makes it easy to add a new built-in function or module to the interpreter on an existing program and allows us to link the Python interpreter to an application written in C to use as an extension or command language for that application. Python places a strong emphasis on readability and efficiency and can be picked up easily by Java, C, Perl and other language converts.
 
-### Python Odities
+#### Python Odities
 
 Before we move to the actual tutorial I thought it might be useful to list some of the language protocols that might seem foreign to new users \(as they did to me\).
 

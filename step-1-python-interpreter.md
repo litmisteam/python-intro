@@ -2,13 +2,13 @@
 
 ##### Python Interpreter \(Shell Commands\) {#python-interpreter-shell-commands}
 
-It should first be noted that Python utilizes an interpreter to render it's code into machine readable instructions, not a compiler. The interpreter reads in a program line by line, executing each line in order, unlike a compiler that translates the contents of the program before execution. I thought it useful to take a moment and explain the difference between the two translators as the rest of this section utilizes the Python interpreter to run simple Python commands, which can be confusing to individuals accustomed to a compiler for their code of choice.
+It should first be noted that Python utilizes an interpreter to render it's code into machine readable instructions, not a compiler. An interpreter reads in a program line by line, executing each line in order, unlike a compiler that translates the contents of the program before execution. I thought it useful to take a moment and explain the difference between the two translators as the rest of this section utilizes the Python interpreter to run simple Python commands, which can be confusing to individuals accustomed to a compiler for their code of choice.
 
 The Python interpreter allows you to run small pieces of code in the shell and to immediately see the results. To enter the Python interpreter simply type 'python' at which point you should be brought to a new line in the shell with a &gt;&gt;&gt; at the start of the line to indicate that you are in the Python interpreter \(the '&gt;&gt;&gt;' indicator can even be personalized!\). To exit simply type 'exit\(\)' or 'ctrl+c / cmd+d'.
 
 Below, you can jump right into a brief introduction on the Python interpreter if you are so inclined to do so! If your comfortable with Python at this point, you might find it more useful to jump ahead to Step 2 and use this Step as well as the Python Overview as references for anything you might find unfamiliar with moving forward.
 
-### Getting Started
+#### Running the Interpreter
 
 To enter the Python interpreter you simply need to enter "python3" into the shell interface of your choice. From there, as stated above, you can enter individual lines of valid Python code that the interpreter will then make sense of in real time, allowing you to try out single-line commands in a stress free environment and get the results from those commands immediately.
 
