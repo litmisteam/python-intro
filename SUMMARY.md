@@ -3,6 +3,7 @@
 ## Intro to Python on IBM i
 
 * [Introduction](README.md)
+* Step 4: DB Connection
 
 ## PASE
 

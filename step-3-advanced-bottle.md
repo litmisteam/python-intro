@@ -127,8 +127,6 @@ def download(filename):
 run(host='spaces.litmis.com', port=62368)
 ```
 
-
-
 Now that we have touched on some of the basic principles behind the routing mechanism of Bottle, its time to take a deeper look at HTTP request methods and their interaction with the Bottle routing notation.
 
 The HTTP protocol defines several methods for different response tasks. In botttle, GET is the default for all routes with no other specified method. To handle other methods we need to add a method keyword to the route\(\) decorator or use one of the alternative decorators: get\(\), post\(\), put\(\), delete\(\), patch\(\).
