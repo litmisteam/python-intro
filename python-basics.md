@@ -2,21 +2,21 @@
 
 ## \(If you're familiar with Python, feel free to skip this section!\)
 
-CodeEval, an exclusive community of over 69,000 competetive developers has assessed Python as the 'most popular coding language' for the past FIVE years \(Last Ranking - 2016\).
+CodeEval, an exclusive community of over 69,000 competitive developers, has assessed Python as the 'most popular coding language' for the past FIVE years \(last ranking - 2016\).
 
-With such a thriving community, it's hard to come up with a reason not to get on the Python bandwagon. It's recent integration to the IBM i platform furthers the existing incentive, meaning its never been a better time to read ahead and begin your Python journey!
+With such a thriving community, it's hard to come up with a reason not to get on the Python bandwagon. Its recent integration to the IBM i platform furthers the existing incentive, meaning it's never been a better time to read ahead and begin your Python journey!
 
-#### Overview:
+#### Overview
 
-Python is a high level scripting language with object oriented features. Python offers more structure and support for large programs than shell scripts or batch files can offer while remaining a simple to use programming language. In fact, with high-level data types built in \(flexible arrays and dictionaries\) Python is actually considered a very-high-level-language. Allowing you to split your program into modules that can be reused in other Python programs greatly expands the language's inherent capabilities. Things like file I/O, system calls, sockets and even interfaces to graphical user interface toolkits can be modularized to reduce development time.  Furthermore, Python is both an interpreted language and extensible. Being an interpreted language means that no compilation and linking is necessary making it easier to experiment with features of the language. Extensibility makes it easy to add a new built-in function or module to the interpreter on an existing program and allows us to link the Python interpreter to an application written in C to use as an extension or command language for that application. Python places a strong emphasis on readability and efficiency and can be picked up easily by Java, C, Perl and other language converts.
+Python is a high-level scripting language with object oriented features. Python offers more structure and support for large programs than shell scripts or batch files can offer while remaining a simple to use programming language. In fact, with high-level data types built in \(flexible arrays and dictionaries\) Python is actually considered a very-high-level-language. Allowing you to split your program into modules that can be reused in other Python programs greatly expands the language's inherent capabilities. Things like file I/O, system calls, sockets and even interfaces to graphical user interface toolkits can be modularized to reduce development time. Furthermore, Python is both an interpreted language and extensible. Being an interpreted language means that no compilation and linking is necessary making it easier to experiment with features of the language. Extensibility makes it easy to add a new built-in function or module to the interpreter on an existing program and allows us to link the Python interpreter to an application written in C to use as an extension or command language for that application. Python places a strong emphasis on readability and efficiency and can be picked up easily by Java, C, Perl and other language converts.
 
-#### Python Odities
+#### Python Oddities
 
 Before we move to the actual tutorial I thought it might be useful to list some of the language protocols that might seem foreign to new users \(as they did to me\).
 
 ##### Indentation
 
-Python uses indentation for blocks, instead of curly praces. Both tabs and spaces are supported, but the standard indentation requires Python code to use four spaces.
+Python uses indentation for blocks, instead of curly braces. Both tabs and spaces are supported, but the [standard style guide](https://www.python.org/dev/peps/pep-0008/) recommends the use of four spaces per indentation level.
 
 ```
 x = 1
@@ -27,7 +27,7 @@ if x == 1:
 
 The above code block illustrates the use of spaces in flow-control statements such as the 'if' statement. The bottom line here is that Python recognizes spacing similar to how HTML does and misplaced or misused spaces can be fatal to program execution.
 
-You might also note that the above code segment illustrates the lack of termination characters \(; in java\).
+You might also note that the above code segment illustrates the lack of termination characters \(such as ';' in Java or C\).
 
 ##### Variable Assignment
 
@@ -38,9 +38,9 @@ a, b = 3, 4
 print(a, b)
 ```
 
-The above code would return 3, 4 as both of the variables were assigned at once.
+The above code would print 3, 4 as both of the variables were assigned at once.
 
-Furthermore, variables are dynamically typed, meaning that Python has no type declarations and instead implies them itself. Python is strongly typed however, making variable assignment and modification an important aspect of code to still be aware of even without the direct type declarations.
+Furthermore, variables are dynamically typed, meaning that Python has no type declarations and instead imfers them itself. Python is strongly typed however, making variable assignment and modification an important aspect of code to still be aware of even without the direct type declarations.
 
 ##### Flow Control
 
@@ -50,9 +50,9 @@ The last odd Python syntax we will cover is the variety of ways you can implemen
 count = 0
 while (count < 5):
     print(count)
-    count +=1
+    count += 1
 else:
-    print("count value reached %d" %(count))
+    print("count value reached %d" % count)
 ```
 
 ## Please proceed to the next step. {#_please_proceed_to_the_next_step}
