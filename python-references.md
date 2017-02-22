@@ -4,17 +4,11 @@
 
 Python Downloads: [https://www.python.org/downloads/](https://www.python.org/downloads/)
 
-Begginer Tutorials: [https://wiki.python.org/moin/BeginnersGuide/Programmers](http://www.effbot.org/zone/librarybook-index.htm)
-
-Python Module Information:[ http://www.effbot.org/zone/librarybook-index.htm](http://www.effbot.org/zone/librarybook-index.htm)
+Beginner Tutorials: [https://wiki.python.org/moin/BeginnersGuide/Programmers](https://wiki.python.org/moin/BeginnersGuide/Programmers)
 
 Python Documentation: [https://docs.python.org/3/](https://docs.python.org/3/)
 
-Python Library Reference: https://docs.python.org/3/library/
+Python Library Reference: [https://docs.python.org/3/library/](https://docs.python.org/3/library/)
 
-Popular Python Recipes: http://code.activestate.com/recipes/langs/python/
-
-
-
-
+Popular Python Recipes: [http://code.activestate.com/recipes/langs/python/](http://code.activestate.com/recipes/langs/python/)
 
