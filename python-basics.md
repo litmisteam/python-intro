@@ -2,7 +2,7 @@
 
 ## \(If you're familiar with Python, feel free to skip this section!\)
 
-CodeEval, an exclusive community of over 69,000 competitive developers, has assessed Python as the 'most popular coding language' for the past FIVE years \(last ranking - 2016\).
+CodeEval, an exclusive community of over 69,000 competitive developers, has assessed Python as the "most popular coding language" for the past FIVE years \(last ranking - 2016\).
 
 With such a thriving community, it's hard to come up with a reason not to get on the Python bandwagon. Its recent integration to the IBM i platform furthers the existing incentive, meaning it's never been a better time to read ahead and begin your Python journey!
 
@@ -40,19 +40,23 @@ print(a, b)
 
 The above code would print 3, 4 as both of the variables were assigned at once.
 
-Furthermore, variables are dynamically typed, meaning that Python has no type declarations and instead imfers them itself. Python is strongly typed however, making variable assignment and modification an important aspect of code to still be aware of even without the direct type declarations.
+Furthermore, variables are dynamically typed, meaning that Python has no type declarations and instead infers them itself. Python is strongly typed however, making variable assignment and modification an important aspect of code to still be aware of even without the direct type declarations.
 
 ##### Flow Control
 
-The last odd Python syntax we will cover is the variety of ways you can implement flow control. As an example I will use a 'while' loop with a set condition that after execution, will terminate to an 'else' statment.
+The last odd Python syntax we will cover is the use of an 'else' clause following a loop. If the loop executes to completion, the 'else' block will be executed. However, if the loop is exited prematurely, the 'else' block will be skipped.
 
 ```
 count = 0
-while (count < 5):
+target = 8
+while count < 10:
     print(count)
+    if count == target:
+        print('Target found!')
+        break
     count += 1
 else:
-    print("count value reached %d" % count)
+    print('Target not found.')
 ```
 
 ## Please proceed to the next step. {#_please_proceed_to_the_next_step}
