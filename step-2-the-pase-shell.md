@@ -2,7 +2,7 @@
 
 You access PASE using what’s called a _shell_. The [PASE](https://kti.news/pase-v73\) shell is a lot like a 5250 Telnet session; it’s a program that takes your commands from the keyboard and hands them to the operating system to perform their associated action. It is also known as a CLI \(Command Line Interface\).
 
-By default PASE uses the Korn Shell \(aka `ksh`\). One way you can enter into a PASE Korn Shell is via `CALL QP2TERM` from a 5250 Telnet session, as shown below.
+By default PASE uses the Korn shell \(aka `ksh`\). One way you can enter into a PASE Korn shell is via `CALL QP2TERM` from a 5250 Telnet session, as shown below.
 
 ![](https://litmis.gitbooks.io/pase-intro/content/assets/pase_call_qp2term1.png)
 
@@ -12,13 +12,13 @@ Figure 1.
 
 The `pwd` command has been keyed in and the enter key pressed. Under the covers the `pwd` C program is invoked, does its thing, and returns output back to your shell’s screen.
 
-## QP2TERM and QShell {#_qp2term_and_qshell}
+## QP2TERM and Qshell {#_qp2term_and_qshell}
 
-If you’ve been on the IBM i for any amount of time you’ve probably been exposed to QShell. You can start a QShell session by typing QSH. You’ll notice QShell looks **very** similar to `CALL QP2TERM`.
+If you’ve been on the IBM i for any amount of time you’ve probably been exposed to Qshell. You can start a Qshell session by typing `QSH`. You’ll notice Qshell looks **very** similar to `CALL QP2TERM`.
 
 ![](https://litmis.gitbooks.io/pase-intro/content/assets/qshell_strqsh.png)
 
-The primary difference between these two environments is that QShell is based on the ILE environment and CALL QP2TERM is based on AIX. For 99% of what you do you will stay away from QShell because it doesn’t operate correctly in certain circumstances. The few scenarios you will use it involve starting a shell script from a 5250 session; but it will in turn enter into a real PASE shell.
+The primary difference between these two environments is that Qshell is based on the ILE environment and QP2TERM is based on AIX. For 99% of what you do you will stay away from Qshell because it doesn’t operate correctly in certain circumstances. The few scenarios you will use it involve starting a shell script from a 5250 session; but it will in turn enter into a real PASE shell.
 
 ```
 SBMJOB CMD(QSH CMD('/path/to/script.sh parm1 parm2'))
@@ -28,7 +28,7 @@ A significant amount of more information concerning PASE shells can be found on 
 
 ## A Better Shell {#_a_better_shell}
 
-Ok, we now know QShell should be used in limited fashion and that getting to the Korn shell \(ksh\) via `CALL QP2TERM` is better, but it still isn’t the best.
+Ok, we now know Qshell should be used in limited fashion and that getting to the Korn shell via `CALL QP2TERM` is better, but it still isn’t the best.
 
 Instead what you should be using is a more feature rich shell, like `bash`. The Bourne Again Shell \(bash\) is now included with [5733OPS option 7](http://bit.ly/dw-5733ops-tools).
 
