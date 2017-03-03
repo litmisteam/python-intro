@@ -1,6 +1,6 @@
 # The Shell {#the-shell}
 
-You access PASE using what’s called a _shell_. The [PASE](https://kti.news/pase-v73) shell is a lot like a 5250 Telnet session; it’s a program that takes your commands from the keyboard and hands them to the operating system to perform their associated action. It is also known as a CLI \(Command Line Interface\).
+You access PASE using what’s called a _shell_. The [PASE](https://kti.news/pase-v73\) shell is a lot like a 5250 Telnet session; it’s a program that takes your commands from the keyboard and hands them to the operating system to perform their associated action. It is also known as a CLI \(Command Line Interface\).
 
 By default PASE uses the Korn Shell \(aka `ksh`\). One way you can enter into a PASE Korn Shell is via `CALL QP2TERM` from a 5250 Telnet session, as shown below.
 
@@ -24,7 +24,7 @@ The primary difference between these two environments is that QShell is based on
 SBMJOB CMD(QSH CMD('/path/to/script.sh parm1 parm2'))
 ```
 
-A significant amount of more information concerning PASE shells can be found on the [YiPs site](https://kti.news/yips-pase-shell) where Tony Cairns \(IBM’er at Rochester\) goes deep and wide on a variety of PASE topics.
+A significant amount of more information concerning PASE shells can be found on the [YiPs site](https://kti.news/yips-pase-shell\) where Tony Cairns \(IBM’er at Rochester\) goes deep and wide on a variety of PASE topics.
 
 ## A Better Shell {#_a_better_shell}
 
@@ -36,11 +36,11 @@ Instead what you should be using is a more feature rich shell, like `bash`. The 
 
 * **Tab key to complete.** Instead of fully typing a directory or file name you can hit the tab key and it will auto complete it.
 
-* **Short-cut keys.** For example, Ctrl+A and Crtl+E go to the beginning and end of the current line, respectively.
+* **Short-cut keys.** For example, Ctrl+A and Ctrl+E go to the beginning and end of the current line, respectively.
 
-* **Custom Prompt.** Bash allows you to customize your prompt to include things like the current directory, the current user. i.e. `[aaron@SPACES]/home/aaron/git$`
+* **Custom Prompt.** Bash allows you to customize your prompt to include things like the current directory and the current user, e.g. `[aaron@SPACES]/home/aaron/git$`
 
-The other thing you need to know is that, while bash works in QP2TERM, it is fairly crippled. For example, the tab-to-complete and short-cut keys don’t work in QP2TERM because it isn’t what called a teletypewriter \(TTY\) type terminal. To get a TTY terminal we need to start the `*SSHD` \(SSH Daemon\)\[[1](https://litmis.gitbooks.io/pase-intro/content/step-2-the-shell.html#_footnote_1)\] server and then use a client-side program \(on the desktop\) to connect to a bash shell on IBM i.
+The other thing you need to know is that, while Bash works in QP2TERM, it is fairly crippled there. For example, the tab-to-complete and short-cut keys don’t work in QP2TERM because it isn’t what is called a teletypewriter \(TTY\) terminal. For that matter, a lot of basic functionality in ksh or any other Unix-style shell is unavailable without a TTY terminal. To get a TTY terminal we need to start the `*SSHD` \(SSH Daemon\)\[[1](https://litmis.gitbooks.io/pase-intro/content/step-2-the-shell.html#_footnote_1\)] server and then use a client-side program \(on the desktop\) to connect to a bash shell on IBM i.
 
 Once the `*SSHD` TCP server is started you can then connect to it using a terminal client, as shown below on Windows using [Git Bash](https://kti.news/gitbash-for-windows).
 
