@@ -3,7 +3,6 @@
 ## Intro to Python on IBM i
 
 * [Introduction](README.md)
-* Step 4: DB Connection
 
 ## PASE
 
@@ -22,6 +21,7 @@
 * [Step 1: Python Interpreter](step-1-python-interpreter.md)
 * [Step 2: Learn Python with Bottle](step-2-python.md)
 * [Step 3: Advanced Bottle](step-3-advanced-bottle.md)
+* [Step 4: DB Connection](step-4-db-connection.md)
 * [Bottle Tutorial](bottle.md)
 * [Python References](python-references.md)
 
