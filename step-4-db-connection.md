@@ -6,9 +6,7 @@ The goal of Step 4 in this tutorial is to introduce the audience to much more co
 
 #### Templates \(Continued\)
 
-In a way, this section is a necessary continuation of Step 2's introduction to the Bottle template engine \(SimpleTemplate\). Here though, we are going to go further in depth and make use of form data as well as rendering parameters for the templates. First, we need to create a file that represents the template we want to render when a particular action \(route\) occurs. 
-
-Create a new folder to hold our templates, name it 'Templates' or 'Views'. Some template engines default to the home directories 'View' folder to find templates to render, though for SimpleTemplate we won't have to worry about that. After this folder has been created, make a file called 'newUser.html' inside that folder as shown:
+In a way, this section is a necessary continuation of Step 2's introduction to the Bottle template engine \(SimpleTemplate\). Here though, we are going to go further in depth and make use of form data as well as rendering parameters for the templates. First, we need to create a file that represents the template we want to render when a particular action \(route\) occurs.
 
 
 
