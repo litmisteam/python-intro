@@ -1,6 +1,6 @@
 # Learning Python with Bottle
 
-While using the interpreter can open up a range of resources for Python development and learning the general aspects of the language, some would argue that jumping right in and making use of one of the many public libraries avaliable to Python users doos a better job illustrating the power of the language. [Bottle](https://bottlepy.org/docs/dev/ "See the Bottle documentation") is a fast, simple and lightweight WSGI micro web-framework for Python distributed as a single file module with no dependiencies other than the Python Standard Library, making it a perfect candidate to illustrate the power behind Python and why it's inclusion into the PASE environment is so monumental.
+While using the interpreter can open up a range of resources for Python development and help speed up ingestion of the language syntax, some would argue that jumping right in and making use of one of the many public libraries avaliable to Python users doos a better job illustrating the power of the language. [Bottle](https://bottlepy.org/docs/dev/ "See the Bottle documentation") is a fast, simple and lightweight WSGI micro web-framework for Python distributed as a single file module with no dependiencies other than the Python Standard Library, making it a perfect candidate to illustrate the power behind Python and why it's inclusion into the PASE environment is so monumental.
 
 #### Characteristics
 

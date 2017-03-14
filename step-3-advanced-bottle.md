@@ -1,4 +1,4 @@
-# Advanced Bottle
+# Routing Introduction
 
 Welcome to the advanced section of the Python development with Bottle tutorial. In this section we will be taking a closer look at a variety of Bottle concepts including advanced routing techniques, server modification, and the Bottle Simple Template engine to name a few.
 
