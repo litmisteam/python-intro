@@ -21,6 +21,6 @@
 * [Step 1: Python Interpreter](step-1-python-interpreter.md)
 * [Step 2: Learn Python with Bottle](step-2-python.md)
 * [Step 3: Routing Introduction](step-3-advanced-bottle.md)
-* [Step 4: SimpleTemplate/Enhanced Routing](step-4-db-connection.md)
+* [Step 4: SimpleTemplate](step-4-db-connection.md)
 * [Python References](python-references.md)
 
