@@ -1,8 +1,8 @@
-# **DB Connection**
+# Simple Template and Routing Cont.
 
 The goal of Step 4 in this tutorial is to introduce the audience to much more complex bottle topics while also digging deeper into concepts introduced in previous steps. We will focus on both deeper template usage and interactions with the Bottle template interface as well as ibm-db-dbi connections to the local DB2 offering that comes with the partition of the IBM i offered through Litmis Spaces. While this is not meant to make you an expert on DB2 operations, SQL queries, or template usage, it may help incoming or perspective IBM i/Bottle/Litmis Space users better understand the core functionality of each of these technologies and how they interact and complement eachother.
 
-#### Templates \(Continued\)
+#### Templates
 
 In a way, this section is a necessary continuation of Step 2's introduction to the Bottle template engine \(SimpleTemplate\). Here though, we are going to go further in depth and make use of form data as well as rendering parameters for the templates. First, we need to create a file that represents the entry point for our web application. This file will contain the contents of the first page that any incoming user to our site is directed to. For this sections example application, we are going to build off the yahoo-finance library that we encountered briefly in Step 3. I will also be using the litmis space that we set up in the IBM i Access section throughout this section of the tutorial. Copy and paste the following '.html' file to your IFS with a filename of your choosing. If you are still struggling to understand the Integrated File System \(IFS\) you can simply create a new file titled 'lookupStock.html' in the root directory of your workspace filesystem and copy the following code to that file.
 

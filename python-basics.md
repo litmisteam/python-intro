@@ -1,6 +1,6 @@
 # Python Basics
 
-## \(If you're familiar with Python, feel free to skip this section!\)
+#### \(If you're familiar with Python, feel free to skip this section!\)
 
 CodeEval, an exclusive community of over 69,000 competitive developers, has assessed Python as the "most popular coding language" for the past FIVE years \(last ranking - 2016\).
 
