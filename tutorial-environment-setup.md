@@ -32,6 +32,21 @@ There are four buttons which constitute actions you can take with your Space. Th
 
 * **Delete Space. WARNING!** If you select this option and the subsequent warning prompt, your Space will be deleted. This **CANNOT** be undone.
 
+# Environment Variables
+
+Each environment has specific settings that are stored in PASE environment variables.  They are as follows.  When you log into a PASE shell these are automatically set for you.  You should not modify these values.
+
+```
+export LITMIS_SPACE_GUID=xxxx
+export LITMIS_SPACE_USER=USRxxxxx
+export LITMIS_SCHEMA_DEVELOPMENT=xxxxx_D
+export LITMIS_SCHEMA_TEST=xxxxx_T
+export LITMIS_SCHEMA_PRODUCTION=xxxxx_P
+export LITMIS_PORT_DEVELOPMENT=11111
+export LITMIS_PORT_TEST=22222
+export LITMIS_PORT_PRODUCTION=33333
+```
+
 ## Please proceed to the next step. {#_please_proceed_to_the_next_step}
 
 
