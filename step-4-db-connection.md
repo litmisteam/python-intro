@@ -1,6 +1,6 @@
 # Simple Template and Routing Cont.
 
-The goal of Step 4 in this tutorial is to introduce the audience to much more complex bottle topics while also digging deeper into concepts introduced in previous steps. We will focus on both deeper template usage and interactions with the Bottle template interface as well as ibm-db-dbi connections to the local DB2 offering that comes with the partition of the IBM i offered through Litmis Spaces. While this is not meant to make you an expert on DB2 operations, SQL queries, or template usage, it may help incoming or perspective IBM i/Bottle/Litmis Space users better understand the core functionality of each of these technologies and how they interact and complement eachother.
+The goal of Step 4 in this tutorial is to introduce the audience to much more complex bottle topics while also digging deeper into concepts introduced in previous steps. We will focus on both more in depth template usage as well as interactions with the Bottle template interface while working with the yahoo-finance module to produce a ticker lookup system that returns information about a company associated with a valid user entered ticker string. While this is not meant to make you an expert on DB2 operations, SQL queries, or template usage, it may help incoming or perspective IBM i/Bottle/Litmis Space users better understand the core functionality of each of these technologies and how they interact and complement eachother.
 
 #### Templates
 
