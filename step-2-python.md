@@ -1,6 +1,6 @@
 # Learning Python with Bottle
 
-While using the interpreter can open up a range of resources for Python development and help speed up ingestion of the language syntax, some would argue that jumping right in and making use of one of the many public libraries avaliable to Python users does a better job illustrating the power of the language. [Bottle](https://bottlepy.org/docs/dev/ "See the Bottle documentation") is a fast, simple and lightweight WSGI micro web-framework for Python distributed as a single file module with no dependencies other than the Python standard library, making it a perfect candidate to illustrate the power behind Python and why its inclusion into the PASE environment is so monumental.
+While using the interpreter can open up a range of resources for Python development and help speed up ingestion of the language syntax, some would argue that jumping right in and making use of one of the many public libraries available to Python users does a better job illustrating the power of the language. [Bottle](https://bottlepy.org/docs/dev/ "See the Bottle documentation") is a fast, simple and lightweight WSGI micro web-framework for Python distributed as a single file module with no dependencies other than the Python standard library, making it a perfect candidate to illustrate the power behind Python and why its inclusion into the PASE environment is so monumental.
 
 #### Characteristics
 
@@ -130,13 +130,13 @@ Hit Ctrl-C to quit.
 
 Restarting the console resets your directory setting so using an 'ls' command to determine your whereabouts in the IFS is a good way to start any shell entry. Using the 'cd' command to change directories to the 'bottleLearning' directory and using 'ls' to list its contents is a way to display a text readout of the filename we are trying to use so that we can avoid any syntax errors in our execution statement. Once in the correct directory you can then issue the 'python3 firstBottleExample.py' command as shown to run the interpreter and execute the file contents. This runs the code we saved in the 'firstBottleExample.py' file, starting a server at the requested host and port number as outlined in the file, which produces the output shown. To stop the server, press 'ctrl-c' from inside the shell interface. Copy and paste the URL listed at the 'Listening on http://...' line into a browser to view the server response based on our code entry!
 
-If your unfamiliar with the routing we defined, here are some examples of valid routes this code will accept:
+If you're unfamiliar with the routing we defined, here are some examples of valid routes this code will accept:
 
 ![](/assets/routingInBrowserExample.png)
 
 ![](/assets/firefoxRoutingExampleWithArrows.png)
 
-Simply enter the host name, port address and the proper routing configuration and you should see a response in a browser based on code that you just entered! Congratulations on your fist webpage using Python's Bottle module! Move on to Step 3 for more advanced Bottle topics and examples or skip ahead to a different topic if you so choose to!
+Simply enter the host name, port address and the proper routing configuration and you should see a response in a browser based on code that you just entered! Congratulations on your first webpage using Python's Bottle module! Move on to Step 3 for more advanced Bottle topics and examples or skip ahead to a different topic if you so choose to!
 
 ## Please proceed to the next step. {#_please_proceed_to_the_next_step}
 
