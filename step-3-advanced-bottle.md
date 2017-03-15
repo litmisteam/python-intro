@@ -110,7 +110,6 @@ Copy and paste the code snippet from above that includes the second routing deco
 
 Before we move beyond static files and wildcards, I thought it worth illustrating one more out of the box construct of Bottle, the forced file download. Enter the code below and observe the interactions when the proper URL is sent to the browser.
 
-
 ```
 from bottle import route, run, template, static_file
 
