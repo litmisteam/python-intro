@@ -6,7 +6,7 @@ Python is often thought of as an interpreted language, but like other relatively
 
 Another way in which Python feels as though it's interpreted directly, in classic line-by-line fashion, is that it includes an interactive mode which lets you type in small pieces of code and immediately see the results. This interactive mode is often called the Python shell. We'll try to avoid saying "Python shell", to avoid confusion with the regular command shell \(which accepts Unix/Linux/PASE commands\), but you should be aware of it in case you are also reading other Python learning materials.
 
-Below, you can jump right into a brief introduction of Python's interactive mode if you are so inclined to do so! If you're comfortable with Python at this point, you might find it more useful to jump ahead to Step 2, and just refer back to Step 1 or the Python Overview when you encounter something unfamiliar.
+Below, you can jump right into a brief introduction of Python's interactive mode if you are inclined to do so! If you're comfortable with Python at this point, you might find it more useful to jump ahead to Step 2, and just refer back to Step 1 or the Python Overview when you encounter something unfamiliar.
 
 #### Running the Interpreter in Interactive Mode
 
@@ -51,7 +51,7 @@ NameError: name 'somevariable' is not defined
 ... 
 Aaron Rodgers is their quarterback.
 >>> # Multi-line constructs require continuation lines (...).
-... # Whitespace matters in Python so the tab space in front of the 'print' function above is required! 
+... # Whitespace matters in Python so the tab space in front of the 'print' function above is required!
 ```
 
 The first thing you see me do in this example is access an undefined variable. Attempting to do so should return the NameError response. Next, a Boolean value is set and then used in a multi-line 'if' statement. Not only does this snippet provide useful information about the 'if' statement syntax, it also illustrates the whitespace requirements of Python. The statement within the 'if' is given four leading spaces to identify it as a part of the 'if' block.

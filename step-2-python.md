@@ -136,7 +136,7 @@ If you're unfamiliar with the routing we defined, here are some examples of vali
 
 ![](/assets/firefoxRoutingExampleWithArrows.png)
 
-Simply enter the host name, port address and the proper routing configuration and you should see a response in a browser based on code that you just entered! Congratulations on your first webpage using Python's Bottle module! Move on to Step 3 for more advanced Bottle topics and examples or skip ahead to a different topic if you so choose to!
+Simply enter the host name, port address and the proper routing configuration and you should see a response in a browser based on code that you just entered! Congratulations on your first webpage using Python's Bottle module! Move on to Step 3 for more advanced Bottle topics and examples or skip ahead to a different topic if you so choose!
 
 ## Please proceed to the next step. {#_please_proceed_to_the_next_step}
 
