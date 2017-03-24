@@ -157,7 +157,71 @@ In the above '.tpl' file, the values surrouned by squigly braces \({\) \(squigly
 </html>
 ```
 
-Once you have these saved, you can go ahead and run the stockSearch.py file and see what happens. You should be able to enter the default address with a '/' at the end and view the beggining of the application as you may have tried in earlier steps.
+Once you have these saved, you can go ahead and run the stockSearch.py file and see what happens. You should be able to enter the default address with a '/' at the end and view the beginning of the application as you may have tried in earlier steps.
+
+To add to your understanding and excitement for Python, check out the following files. The first file is a bottle template file used to output information from the primary file. While I haven't set up a user interface to allow users to change the output based on their entry, the secondary file illustrates the use of the Twitter API to return information from the given users Twitter profile. All you need to do is go to Twitter and set up your access token and secret as well as your consumer key and secret. After you have these authentication pieces, you will be able to enter any users 'screen name' to view a history of their tweets. Implement the following example to view current president Donald Trumps feed as an example \(realDonaldTrump is his screen name being used as a parameter for the Twitter call below\). You will need the json/simplejson, re, bottle and twitter dependencies in your environment to get this working as you can see in the python import statements. Remember, use the 'PIP install' command to retrieve these and the 'PIP list' command if your aren't sure which ones you have. Good luck! 
+
+tweetHistory.tpl:
+
+```
+<html>
+<style>
+</style>
+<head>
+    <title>Tweet Records</title>
+</head>
+<ul>
+    % for tweet in tweetRecords:
+        <li>{{tweet}}</li>
+    % end
+</ul>
+</html>
+```
+
+twitter\_credentials.py:
+
+```
+# Import the necessary package to process data in JSON format
+try:
+    import json
+except ImportError:
+    import simplejson as json
+
+import re
+from bottle import *
+from twitter import Twitter, OAuth, TwitterHTTPError, TwitterStream
+
+port_number=62389
+host_location='spaces.litmis.com'
+newUserForm='newUser.html'
+rootLoc = '/home/USRQPSPY/Templates/'
+
+@route('/')
+def start():
+        # Variables that contains the user credentials to access Twitter API 
+    ACCESS_TOKEN = ''
+    ACCESS_SECRET = ''
+    CONSUMER_KEY = ''
+    CONSUMER_SECRET = ''
+    
+    oauth = OAuth(ACCESS_TOKEN, ACCESS_SECRET, CONSUMER_KEY, CONSUMER_SECRET)
+    
+    twitter = Twitter(auth=oauth)
+    
+    statusDict = twitter.statuses.user_timeline(screen_name="realDonaldTrump", count = 100, exclude_replies = True)
+    
+    theText = []
+    
+    for line in statusDict:
+        text = line['text']
+        result = re.sub(r"http\S+", "", text)
+        theText.append(result)
+        
+    return template('/home/USRQFETE/twitter/tweetHistory.tpl', tweetRecords=theText)
+        
+    
+run(host=host_location, port=port_number, debug=True)
+```
 
 At this point, you should have at least a general understanding of how Python can be used on the IBM i platform for web application development using almost exclusively Bottle \(and whatever application provides the substance of your site of course, as in yahoo-finance in our examples\). If your anything like me, you likely have many questions left unanswered though. In the immediate future, we are going to look at how we can access and make use of the native database \(DB2 by IBM\) that comes with access to an IBM i system. Further down the road, I will attempt to better illustrate the possibilities of Python application development on the IBM i system using IBM-Watson, the native database offering DB2, and a few other interesting modules. Until then though, let us in the open source community at IBM know if you have any suggestions or requests for the Python guide, we would really appreciate the feedback!
 

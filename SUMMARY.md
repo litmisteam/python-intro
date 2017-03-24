@@ -22,6 +22,6 @@
 * [Step 2: Learn Python with Bottle](step-2-python.md)
 * [Step 3: Routing Introduction](step-3-advanced-bottle.md)
 * [Step 4: SimpleTemplate](step-4-db-connection.md)
-* [Step 5: DB Access](step-5-db-access.md)
+* [Step 5: DB2 Access](step-5-db-access.md)
 * [Python References](python-references.md)
 
