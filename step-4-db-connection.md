@@ -159,7 +159,20 @@ In the above '.tpl' file, the values surrouned by squigly braces \({\) \(squigly
 
 Once you have these saved, you can go ahead and run the stockSearch.py file and see what happens. You should be able to enter the default address with a '/' at the end and view the beginning of the application as you may have tried in earlier steps.
 
-To add to your understanding and excitement for Python, check out the following files. The first file is a bottle template file used to output information from the primary file. While I haven't set up a user interface to allow users to change the output based on their entry, the secondary file illustrates the use of the Twitter API to return information from the given users Twitter profile. All you need to do is go to Twitter and set up your access token and secret as well as your consumer key and secret. After you have these authentication pieces, you will be able to enter any users 'screen name' to view a history of their tweets. Implement the following example to view current president Donald Trumps feed as an example \(realDonaldTrump is his screen name being used as a parameter for the Twitter call below\). You will need the json/simplejson, re, bottle and twitter dependencies in your environment to get this working as you can see in the python import statements. Remember, use the 'PIP install' command to retrieve these and the 'PIP list' command if your aren't sure which ones you have. Good luck! 
+To add to your understanding and excitement for Python, check out the following files. The first file is a bottle template file used to output information from the primary file. While I haven't set up a user interface to allow users to change the output based on their entry, the secondary file illustrates the use of the Twitter API to return information from the given users Twitter profile. All you need to do is go to Twitter and set up your access token and secret as well as your consumer key and secret. After you have these authentication pieces, you will be able to enter any users 'screen name' to view a history of their tweets. Implement the following example to view current president Donald Trumps feed as an example \(realDonaldTrump is his screen name being used as a parameter for the Twitter call below\). You will need the json/simplejson, re, bottle and twitter dependencies in your environment to get this working as you can see in the python import statements. Remember, use the 'pip install' command to retrieve these and the 'pip list' command if your aren't sure which ones you have. Good luck!
+
+'pip list' results:
+
+```
+bottle (0.12.13)                                                                
+pip (9.0.1)                                                                     
+pytz (2016.10)                                                                  
+setuptools (20.3.1)                                                             
+simplejson (3.10.0)                                                             
+six (1.10.0)                                                                    
+twitter (1.17.1)                                                                
+wheel (0.29.0)
+```
 
 tweetHistory.tpl:
 
@@ -203,23 +216,23 @@ def start():
     ACCESS_SECRET = ''
     CONSUMER_KEY = ''
     CONSUMER_SECRET = ''
-    
+
     oauth = OAuth(ACCESS_TOKEN, ACCESS_SECRET, CONSUMER_KEY, CONSUMER_SECRET)
-    
+
     twitter = Twitter(auth=oauth)
-    
+
     statusDict = twitter.statuses.user_timeline(screen_name="realDonaldTrump", count = 100, exclude_replies = True)
-    
+
     theText = []
-    
+
     for line in statusDict:
         text = line['text']
         result = re.sub(r"http\S+", "", text)
         theText.append(result)
-        
+
     return template('/home/USRQFETE/twitter/tweetHistory.tpl', tweetRecords=theText)
-        
-    
+
+
 run(host=host_location, port=port_number, debug=True)
 ```
 
@@ -229,7 +242,7 @@ You can reach me directly via E-Mail!
 
 E-Mail: Eric.Newman@ibm.com
 
-## Further Steps Under Construction :\( Last Updated: 3/14/17
+## Further Steps Under Construction :\( Last Updated: 3/24/17
 
 
 
