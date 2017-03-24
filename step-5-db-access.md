@@ -4,7 +4,5 @@ In this section we will be using the 'ibm db dbi' library to connect to the loca
 
 #### Database Access
 
-To begin our look at how we can access the native database included in our IBM i system, we need to import the proper library using the 'PIP install' command. 
-
-
+To begin our look at how we can access the native database included in our IBM i system, we need to import the proper library using the 'pip install' command.
 
