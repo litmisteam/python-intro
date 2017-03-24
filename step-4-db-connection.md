@@ -1,6 +1,6 @@
 # Simple Template and Routing Cont.
 
-The goal of Step 4 in this tutorial is to introduce the audience to much more complex bottle topics while also digging deeper into concepts introduced in previous steps. We will focus on both more in depth template usage as well as interactions with the Bottle template interface while working with the yahoo-finance module to produce a ticker lookup system that returns information about a company associated with a valid user entered ticker string. While this is not meant to make you an expert on DB2 operations, SQL queries, or template usage, it may help incoming or perspective IBM i/Bottle/Litmis Space users better understand the core functionality of each of these technologies and how they interact and complement eachother.
+The goal of Step 4 in this tutorial is to introduce the audience to much more complex bottle topics while also digging deeper into concepts introduced in previous steps. We will focus on both more in depth template usage as well as interactions with the Bottle template interface while working with the yahoo-finance module to produce a ticker lookup system that returns information about a company associated with a valid user entered ticker string. While this is not meant to make you an expert on template usage, it may help incoming or perspective Bottle/Litmis Space users better understand the core functionality of the API and how to implement it.
 
 #### Templates
 
@@ -164,8 +164,6 @@ At this point, you should have at least a general understanding of how Python ca
 You can reach me directly via E-Mail!
 
 E-Mail: Eric.Newman@ibm.com
-
-
 
 ## Further Steps Under Construction :\( Last Updated: 3/14/17
 
