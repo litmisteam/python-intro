@@ -6,7 +6,7 @@ Welcome to the advanced section of the Python development with Bottle tutorial. 
 
 Bottle provides requests to function-call mapping with support for clean and dynamic URLs to prevent congestion on your web application. Routing is a complex process and Bottle seeks to simplify this complexity by adding clearly defined routing capabilities, wildcards, wildcard filters, and response objects to name a few. This section is dedicated to the routing capabilities Bottle has to offer.
 
-To start our inspection of Bottles routing capabilities we first need to create a new file to store our routing endeavors. This time, unlike in our previous example, we are going to create the files we need within the code editor.
+To start our inspection of Bottle's routing capabilities we first need to create a new file to store our routing endeavors. This time, unlike in our previous example, we are going to create the files we need within the code editor.
 
 ![](/assets/workspaceFilesFileCreation.png)
 
@@ -29,7 +29,7 @@ To break down the code above, we should begin our inspection with the '@route\(\
 
 Beyond the routing concepts there is another construct readers may not yet be familiar with in the above code snippet called static\_file\(\). This method automatically guesses a media type, adds a last-modified header, restricts accessible paths to the root directory for security reasons and generates appropriate error responses.
 
-The code above still needs to have the \(proper\) root variable assigned to tell Bottle where to look for the static file with the given filename. To do so, enter the command line interface and run the following commands to get a listing of your root directory. If you are using litmis spaces to follow along for this lab, it should be '/home/yourUserName'. Enter the value returned by the pwd \(print working directory\) command issued at the root of your file system and add the '/Templates/' extension to finish the root variable specification. It should look something like the example code snippet above once fully specified.
+The code above still needs to have the \(proper\) root variable assigned to tell Bottle where to look for the static file with the given filename. To do so, enter the command line interface and run the following commands to get a listing of your root directory. If you are using Litmis Spaces to follow along for this lab, it should be '/home/yourUserName'. Enter the value returned by the pwd \(print working directory\) command issued at the root of your file system and add the '/Templates/' extension to finish the root variable specification. It should look something like the example code snippet above once fully specified.
 
 ```
 [usr3ouav@SPACES]~/bottleLearning% cd
@@ -37,7 +37,7 @@ The code above still needs to have the \(proper\) root variable assigned to tell
 /home/USR3OUAV
 ```
 
-To make proper use of the static\_file\(\) method, we need to create a file that it can render. Create a file in the 'Templates' folder within your root directory and name it 'wildcardSample.html'. This is what bottle will render for us when called to do so with the proper URL entry. Enter the following lines of HTML, or whatever HTML you would prefer to recieve as a response from our callback function, and save the file under the 'wildcardSample.html' file that was just created.
+To make proper use of the static\_file\(\) method, we need to create a file that it can render. Create a file in the 'Templates' folder within your root directory and name it 'wildcardSample.html'. This is what bottle will render for us when called to do so with the proper URL entry. Enter the following lines of HTML, or whatever HTML you would prefer to receive as a response from our callback function, and save the file under the 'wildcardSample.html' file that was just created.
 
 ```
 <!DOCTYPE HTML>
@@ -158,7 +158,7 @@ def do_login():
 run(host='spaces.litmis.com', port=62368)
 ```
 
-This code block illustrates the different ways you can use the routing mechanisms in Bottle. Notice the '\#' comment lines that define alternative route decorators for the non-commented versions provided. If you are unfamiliar with some of the syntax here, that is okay. What you should really be taking from this example is the use of the @get and @post route decorators and what they imply. In the @get block, we see an odd return value starting with tripple quotes, which is simply an HTML form embedded in our python code with the '''  ''' tags surrounding it. This form takes a Username and Password as input values, and when submitted, it generates the @post response based on these values.
+This code block illustrates the different ways you can use the routing mechanisms in Bottle. Notice the '\#' comment lines that define alternative route decorators for the non-commented versions provided. If you are unfamiliar with some of the syntax here, that is okay. What you should really be taking from this example is the use of the @get and @post route decorators and what they imply. In the @get block, we see an odd return value starting with triple quotes, which is simply an HTML form embedded in our Python code with the '''  ''' tags surrounding it. This form takes a Username and Password as input values, and when submitted, it generates the @post response based on these values.
 
 Once the @get values are submitted, the @post request responds due to the 'method="post"' declaration in the HTML form. It knows when to respond due to the call from the get routes 'action="/login"' line. To retrieve the values from the form the 'request.forms.get\(\)' method is used with the appropriate input names provided as parameters. This finds the form values entered by the user and extracts them from the form.
 
@@ -166,11 +166,11 @@ Run the @get and @post code snippet and see if you can follow the flow of the ap
 
 ![](/assets/bottleFormUseExample.png)
 
-What response do you think you will recieve when you fill in the form and submit it with the login button?
+What response do you think you will receive when you fill in the form and submit it with the login button?
 
 ![](/assets/undefinedMethodResponseError.png)
 
-We recieve this response because we never defined the check\_login\(username, password\) function! Lets change a few things and see if we can get a response.
+We receive this response because we never defined the check\_login\(username, password\) function! Lets change a few things and see if we can get a response.
 
 ```
 from bottle import get, post, request, run # or route
