@@ -4,7 +4,7 @@ The goal of Step 4 in this tutorial is to introduce the audience to much more co
 
 #### Templates
 
-In a way, this section is a necessary continuation of Step 2's introduction to the Bottle template engine \(SimpleTemplate\). Here though, we are going to go further in depth and make use of form data as well as rendering parameters for the templates. First, we need to create a file that represents the entry point for our web application. This file will contain the contents of the first page that any incoming user to our site is directed to. For this sections example application, we are going to build off the yahoo-finance library that we encountered briefly in Step 3. I will also be using the litmis space that we set up in the IBM i Access section throughout this section of the tutorial. Copy and paste the following '.html' file to your IFS with a filename of your choosing. If you are still struggling to understand the Integrated File System \(IFS\) you can simply create a new file titled 'lookupStock.html' in the root directory of your workspace filesystem and copy the following code to that file.
+In a way, this section is a necessary continuation of Step 2's introduction to the Bottle template engine \(SimpleTemplate\). Here though, we are going to go further in depth and make use of form data as well as rendering parameters for the templates. First, we need to create a file that represents the entry point for our web application. This file will contain the contents of the first page that any incoming user to our site is directed to. For this sections example application, we are going to build off the yahoo-finance library that we encountered briefly in Step 3. I will also be using the Litmis Space that we set up in the IBM i Access section throughout this section of the tutorial. Copy and paste the following '.html' file to your IFS with a filename of your choosing. If you are still struggling to understand the Integrated File System \(IFS\) you can simply create a new file titled 'lookupStock.html' in the root directory of your workspace filesystem and copy the following code to that file.
 
 ```
 <html>
@@ -37,7 +37,7 @@ In a way, this section is a necessary continuation of Step 2's introduction to t
 </html>
 ```
 
-Reiterating a previous point, the above code is not supposed to be showing flawless HTML or CSS usage. What I am trying to show is the use of the values submitted from the above form by our Bottle api. When this form is rendered, the user has the option to enter a ticker value and select the 'Search' button, or hit the 'Close' button. Each of these options has a different form 'action' parameter. The form line is used to signify both the type of HTTP request we will be performing as well as to what address that request should be submitted to! The 'method' parameter clearly defines the type of HTTP request we will make, leaving the 'action' parameter to define where our request should be directed. We come full circle with this traffic control using the Bottle Python module \(or a similar template engine\) to define our routing and serve the application in the following Python file that I've labeled 'stockSearch.py' in my IFS.
+Reiterating a previous point, the above code is not supposed to be showing flawless HTML or CSS usage. What I am trying to show is the use of the values submitted from the above form by our Bottle API. When this form is rendered, the user has the option to enter a ticker value and select the 'Search' button, or hit the 'Close' button. Each of these options has a different form 'action' parameter. The form line is used to signify both the type of HTTP request we will be performing as well as what address that request should be submitted to! The 'method' parameter clearly defines the type of HTTP request we will make, leaving the 'action' parameter to define where our request should be directed. We come full circle with this traffic control using the Bottle Python module \(or a similar template engine\) to define our routing and serve the application in the following Python file that I've labeled 'stockSearch.py' in my IFS.
 
 ```
 from bottle import *
@@ -159,7 +159,7 @@ In the above '.tpl' file, the values surrounded by curly braces are used as vari
 
 Once you have these saved, you can go ahead and run the stockSearch.py file and see what happens. You should be able to enter the default address with a '/' at the end and view the beginning of the application as you may have tried in earlier steps.
 
-To add to your understanding and excitement for Python, check out the following files. The first file is a Bottle template file used to output information from the primary file. While I haven't set up a user interface to allow users to change the output based on their entry, the secondary file illustrates the use of the Twitter API to return information from the given users Twitter profile. All you need to do is go to Twitter and set up your access token and secret as well as your consumer key and secret. After you have these authentication pieces, you will be able to enter any user's 'screen name' to view a history of their tweets. Implement the following example to view current president Donald Trump's feed as an example \(realDonaldTrump is his screen name being used as a parameter for the Twitter call below\). You will need the `bottle` and `twitter` libraries in your environment to get this working as you can see in the Python import statements. Remember, use the 'pip install' command to retrieve these and the 'pip list' command if your aren't sure which ones you have. Good luck!
+To add to your understanding and excitement for Python, check out the following files. The first file is a Bottle template file used to output information from the primary file. While I haven't set up a user interface to allow users to change the output based on their entry, the secondary file illustrates the use of the Twitter API to return information from the given users Twitter profile. All you need to do is go to Twitter and set up your access token and secret as well as your consumer key and secret. After you have these authentication pieces, you will be able to enter any user's screen name to view a history of their tweets. Implement the following example to view current president Donald Trump's feed as an example \(realDonaldTrump is his screen name being used as a parameter for the Twitter call below\). You will need the `bottle` and `twitter` libraries in your environment to get this working as you can see in the Python import statements. Remember, use the 'pip install' command to retrieve these and the 'pip list' command if your aren't sure which ones you have. Good luck!
 
 'pip list' results:
 
@@ -194,13 +194,9 @@ tweetHistory.tpl:
 twitter\_credentials.py:
 
 ```
-# Import the necessary package to process data in JSON format
-try:
-    import json
-except ImportError:
-    import simplejson as json
-
+import json
 import re
+
 from bottle import *
 from twitter import Twitter, OAuth, TwitterHTTPError, TwitterStream
 
@@ -211,7 +207,7 @@ rootLoc = '/home/USRQPSPY/Templates/'
 
 @route('/')
 def start():
-        # Variables that contains the user credentials to access Twitter API 
+    # Variables that contain the user credentials to access Twitter API 
     ACCESS_TOKEN = ''
     ACCESS_SECRET = ''
     CONSUMER_KEY = ''
