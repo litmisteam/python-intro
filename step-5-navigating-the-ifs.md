@@ -9,7 +9,7 @@ Try the `ls` command for yourself and you should see something like the below.
 ~%
 ```
 
-Nothing was listed because the directory is empty. Well, that’s only partially true. I just so happen to know there are "hidden" files in this directory. Hidden files start with a period and aren’t displayed by default. Most all PASE commands have options that let you expound on what you want the command to do. The PASE commands delivered with the IBM i operating system lack what are called "man pages", or manual pages, the documentation for the command. Because of this we instead head to google and search for " [ls command](http://linuxcommand.org/man_pages/ls1.html) ".
+Nothing was listed because the directory is empty. Well, that’s only partially true. I just so happen to know there are "hidden" files in this directory. Hidden files start with a period and aren’t displayed by default. Most PASE commands have options that let you expand on what you want the command to do. The PASE commands delivered with the IBM i operating system lack what are called "man pages", or manual pages, the documentation for the command. Because of this we instead head to Google and search for " [ls command](http://linuxcommand.org/man_pages/ls1.html) ".
 
 In the documentation we see the `-a` option, as shown below.
 

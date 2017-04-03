@@ -25,7 +25,7 @@ def chooseFile(filename):
 run(host='spaces.litmis.com', port=62368)
 ```
 
-To break down the code above, we should begin our inspection with the '@route\(\)' decorator. The route decorator specifies the URL extension we will need to enter beyond our host and port address in order to make the defined \(def ...\) callback function. This code block is also noteable due to its use of a wildcard route. Wildcard routes, properly coined 'dynamic routes', match more than one URL at the same time and consist of a name enclosed in angle brackets. Dynamic or wildcard routes pass the covered part of the URL as a keyword argument to the rest of the callback function \(hence 'chooseFile\(filename\)'\). They support RESTful, visually appealing and syntaxically meaninful URLs right out of the box that is the Bottle module.
+To break down the code above, we should begin our inspection with the '@route\(\)' decorator. The route decorator specifies the URL extension we will need to enter beyond our host and port address in order to make the defined \(def ...\) callback function. This code block is also notable due to its use of a wildcard route. Wildcard routes, properly called "dynamic routes", match more than one URL at the same time and consist of a name enclosed in angle brackets. Dynamic or wildcard routes pass the covered part of the URL as a keyword argument to the rest of the callback function \(hence 'chooseFile\(filename\)'\). They support RESTful, visually appealing and semantically meaningful URLs right out of the box that is the Bottle module.
 
 Beyond the routing concepts there is another construct readers may not yet be familiar with in the above code snippet called static\_file\(\). This method automatically guesses a media type, adds a last-modified header, restricts accessible paths to the root directory for security reasons and generates appropriate error responses.
 
@@ -82,7 +82,7 @@ After we have our server running, we need to use the correct routing configurati
 
 ![](/assets/wildcardRoutingStaticFileBottle.png)
 
-As you can see, the added 'wildcardSample.html' wildcard entry is providing us a response as expected. Now, lets make things a little bit more interesting...
+As you can see, the added 'wildcardSample.html' wildcard entry is providing us a response as expected. Now, let's make things a little bit more interesting...
 
 ```
 from bottle import route, run, template, static_file
@@ -96,7 +96,7 @@ def chooseFile(filename):
 run(host='spaces.litmis.com', port=62368)
 ```
 
-The above code illustrates a few new topics for us. The first noteable piece to take from this example is that one callback can have more than one route bound to it \(with the @route\(\) decorator\).
+The above code illustrates a few new topics for us. The first notable piece to take from this example is that one callback can have more than one route bound to it \(with the @route\(\) decorator\).
 
 \*While creating the code for this section, I noticed that when adding multiple routes, you need to have the shorter route specified first, followed by any longer routes as shown above.
 
@@ -127,11 +127,11 @@ def download(filename):
 run(host='spaces.litmis.com', port=62368)
 ```
 
-Now that we have touched on some of the basic principles behind the routing mechanism of Bottle, its time to take a deeper look at HTTP request methods and their interaction with the Bottle routing notation.
+Now that we have touched on some of the basic principles behind the routing mechanism of Bottle, it's time to take a deeper look at HTTP request methods and their interaction with the Bottle routing notation.
 
-The HTTP protocol defines several methods for different response tasks. In botttle, GET is the default for all routes with no other specified method. To handle other methods we need to add a method keyword to the route\(\) decorator or use one of the alternative decorators: get\(\), post\(\), put\(\), delete\(\), patch\(\).
+The HTTP protocol defines several methods for different response tasks. In Bottle, GET is the default for all routes with no other specified method. To handle other methods we need to add a method keyword to the route\(\) decorator or use one of the alternative decorators: get\(\), post\(\), put\(\), delete\(\), patch\(\).
 
-Lets see this in action, create a new file in the 'bottleLearning' folder on your IFS and name it 'protocolMethods.py'. Within this file enter the following code block:
+Let's see this in action, create a new file in the 'bottleLearning' folder on your IFS and name it 'protocolMethods.py'. Within this file enter the following code block:
 
 ```
 from bottle import run, get, post, request # or route
@@ -170,7 +170,7 @@ What response do you think you will receive when you fill in the form and submit
 
 ![](/assets/undefinedMethodResponseError.png)
 
-We receive this response because we never defined the check\_login\(username, password\) function! Lets change a few things and see if we can get a response.
+We receive this response because we never defined the check\_login\(username, password\) function! Let's change a few things and see if we can get a response.
 
 ```
 from bottle import get, post, request, run # or route
@@ -205,9 +205,9 @@ run(host='spaces.litmis.com', port=62368, reloader = True, debug = True)
 
 The above code demonstrates a few things that I think are worth noting. For instance, this is our first example of a user defined method interacting with the methods within our given route decorator's callback. The 'check\_login\(user, pwrd\)' function defnition will respond affirmatively whenever a user with the name of Eric enters the site, which in practice is likely only appreciated by Eric's \(me\), but does a good job illustrating the use of user defined methods within a callback.
 
-However, this was not the only other change, I also added the 'reloader = True' and 'debug = True' lines in the run statement. The reloader enables our server to self deploy itself if serving a piece of code that we make changes to and then save over. This enhances the responsiveness of the application during application development and can save us a great deal of time during the error checking phase of our application development cycle. Setting the 'debug' variable to true makes Bottle much more verbose in response to error occurances. It also disables some optimizations that might get in your way during the development process and warns you about possible misconfigurations.
+However, this was not the only other change, I also added the 'reloader = True' and 'debug = True' lines in the run statement. The reloader enables our server to self-deploy if serving a piece of code that we make changes to and then save over. This enhances the responsiveness of the application during application development and can save us a great deal of time during the error checking phase of our application development cycle. Setting the 'debug' variable to true makes Bottle much more verbose in response to error occurrences. It also disables some optimizations that might get in your way during the development process and warns you about possible misconfigurations.
 
-Running the above code will produce the following output if you enter 'Eric' as the username. Because of the form values provided, Google Chrome will even respond and ask you to save your login information for this site if your using that particular browser. Though I haven't tested them, I would assume other browsers respond in kind.
+Running the above code will produce the following output if you enter 'Eric' as the username. Because of the form values provided, Google Chrome will even respond and ask you to save your login information for this site if you're using that particular browser. Though I haven't tested them, I would assume other browsers respond in kind.
 
 ![](/assets/loginSuccessBottleExamples.png)
 
