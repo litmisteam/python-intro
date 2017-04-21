@@ -23,5 +23,6 @@
 * [Step 3: Routing Introduction](step-3-advanced-bottle.md)
 * [Step 4: SimpleTemplate](step-4-db-connection.md)
 * [Step 5: DB2 Access](step-5-db-access.md)
+* [Step 6: Watson - SpeechToText](step-6-watson-speechtotext.md)
 * [Python References](python-references.md)
 
