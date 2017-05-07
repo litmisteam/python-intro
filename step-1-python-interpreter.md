@@ -72,7 +72,7 @@ The first thing you see me do in this example is access an undefined variable. A
 8
 ```
 
-Moving on to more complicated topics, we have the Fibonacci Series defined above. This particular implementation illustrates the use of dual assignment on a single liine. The 'while' statement in the code above is similar to the 'if' statement used previously in that they both must be delineated with whitespace instead of brackets or begin/end keywords as used by other popular languages.
+Moving on to more complicated topics, we have the Fibonacci Series defined above. This particular implementation illustrates the use of dual assignment on a single line. The 'while' statement in the code above is similar to the 'if' statement used previously in that they both must be delineated with whitespace instead of brackets or begin/end keywords as used by other popular languages.
 
 ```
 >>> def fib(n):
