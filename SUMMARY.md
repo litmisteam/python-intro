@@ -24,5 +24,7 @@
 * [Step 4: SimpleTemplate](step-4-db-connection.md)
 * [Step 5: DB2 Access](step-5-db-access.md)
 * [Step 6: Watson - SpeechToText](step-6-watson-speechtotext.md)
+* [Step 7: Watson - Personality Insights](step-7-watson-personality-insights.md)
+* [Step 8: Watson - Conversation](watson-conversation.md)
 * [Python References](python-references.md)
 
