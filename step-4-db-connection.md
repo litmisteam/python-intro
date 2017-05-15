@@ -200,10 +200,10 @@ import re
 from bottle import *
 from twitter import Twitter, OAuth, TwitterHTTPError, TwitterStream
 
-port_number=62389
+port_number=YOUR_PORT_NUMBER
 host_location='spaces.litmis.com'
 newUserForm='newUser.html'
-rootLoc = '/home/USRQPSPY/Templates/'
+rootLoc = 'YOUR_ROOT_LOCATION IE /home/usr90ex/twitterFiles'
 
 @route('/')
 def start():
