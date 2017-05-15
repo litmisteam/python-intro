@@ -4,24 +4,22 @@ In this section we will be using the `ibm_db_dbi` library to connect to the loca
 
 #### Database Access
 
-To begin our look at how we can access the native database included in our IBM i system, we need to import the proper library using the 'pip install' command.
+To begin our look at how we can access the native database included in our IBM i system, we need to import the proper library using the 'pip install' \(or pip3 install\) command.
 
-\*\*
+I have decided to put up some code illustrating the use of the native DB2 database through the ibm-db connector \(see the import statement for specific name\). With the 'pip3 list' function in the shell interface I determined that I am using the IBM dbi connector version \(2.0.5.4\) for this example. I hope this can help shed some light on one of the more intimidating concepts to new developers that is database access.
 
-I have decided to put up some code illustrating the use of the native DB2 database through the ibm-db connector \(see the import statement for specific name\). With the 'pip3 list' function in the shell interface I determined that I am using ibm-db version \(2.0.5.4\) for this example. I've been hesitant to put this up as I'm somewhat strapped for time and therefore can't run through the file as I have in previous sections for clarity. Regardless though, I hope this can help shed some light on one of the more intimidating concepts to new developers that is database access. 
-
-NOTE: You will need to change the port number to that of your own space, the file paths throughout the code to match your own space, as well as the name of the database used in the query strings below to your own \(mine is RBJ73\_T and this can be found under your space information from the 'workspaces' pane on Litmis Spaces\).
+NOTE: You will need to change the port number to that of your own space, the file paths throughout the code to match your own space, as well as the name of the database used in the query strings below to your own \(mine is RBK73\_R and this can be found under your space information from the 'workspaces' pane on Litmis Spaces\).
 
 ```
 from bottle import *
 import ibm_db_dbi as dbi
 
-port_number=62389
+port_number=YOURPORTNUM
 host_location='spaces.litmis.com'
 
 @route('/newWatsonDeveloperProfile')
 def newUser():
-    return template('/home/USR3OUAV/dbConnect/Templates/newUser.html')
+    return template('/...NEW_USER_TEMPLATE.html')
 
 @route('/newWatsonDeveloperProfile', method='POST')
 def fillDatabase():
@@ -31,10 +29,10 @@ def fillDatabase():
         title = request.forms.get('title')
         theData = request.forms.get('data')
         result = newEntry(firstName, lastName, title, theData)
-        return template('/home/USR3OUAV/dbConnect/Templates/make_table.tpl', rows=result)
+        return template('/...MAKE_TABLE_TEMPLATE.tpl', rows=result)
     except Exception as e:
         print('EXCEPTION: ' + str(e))
-        return template('/home/USR3OUAV/dbConnect/Templates/newUser.html')
+        return template('/...NEW_USER_TEMPLATE.html')
 
 @route('/removeUser', method='POST')
 def removeUser():
@@ -42,26 +40,26 @@ def removeUser():
         firstName = request.forms.get('firstname')
         lastName = request.forms.get('lastname')
         result = removeEntry(firstName, lastName)
-        return template('/home/USR3OUAV/dbConnect/Templates/make_table.tpl', rows=result)
+        return template('/...TABLE_TEMPLATE.tpl', rows=result)
     except Exception as e:
         print('EXCEPTION: ' + str(e))
-        return template('/home/USR3OUAV/dbConnect/Templates/newUser.html')
+        return template('/...NEW_USER_TEMPLATE.html')
 
 @route('/')
 def showTheDatabase():
     try:
         conn = dbi.connect(dsn=None, database='*LOCAL', user=None, password=None)
         db2 = conn.cursor()
-        sql = "CREATE OR REPLACE TABLE RBJ73_T.BLOGDATA(FIRSTNAME VARCHAR(200) ALLOCATE(20) CCSID 1208, \
+        sql = "CREATE OR REPLACE TABLE YOUR_DBNAME.BLOGDATA(FIRSTNAME VARCHAR(200) ALLOCATE(20) CCSID 1208, \
                                              LASTNAME VARCHAR(200) ALLOCATE(20) CCSID 1208, \
                                              TITLE VARCHAR(1000) ALLOCATE(20) CCSID 1208, \
                                              THEDATA VARCHAR(30739) CCSID 1208)"
         db2.execute(sql)
-        db2.execute("SELECT * FROM RBJ73_T.BLOGDATA FOR READ ONLY")
+        db2.execute("SELECT * FROM YOUR_DBNAME.BLOGDATA FOR READ ONLY")
         result = db2.fetchall()
         db2.close()
         conn.close()
-        return template('/home/USR3OUAV/dbConnect/Templates/make_table.tpl', rows=result)
+        return template('/...MAKE_TABLE_TEMPLATE.tpl', rows=result)
     except Exception as e:
         print('EXCEPTION: ' + str(e))
     finally:
@@ -71,9 +69,9 @@ def newEntry(firstname, lastname, title, data):
     try:
         conn = dbi.connect(dsn=None, database='*LOCAL', user=None, password=None)
         db2 = conn.cursor()
-        db2.execute("INSERT INTO RBJ73_T.BLOGDATA (FIRSTNAME, LASTNAME, TITLE, THEDATA) VALUES (?,?,?,?)",(firstname, lastname, title, data))
+        db2.execute("INSERT INTO YOUR_DBNAME.BLOGDATA (FIRSTNAME, LASTNAME, TITLE, THEDATA) VALUES (?,?,?,?)",(firstname, lastname, title, data))
         conn.commit()
-        db2.execute('Select * from RBJ73_T.BLOGDATA')
+        db2.execute('Select * from YOUR_DBNAME.BLOGDATA')
         result = db2.fetchall()
         db2.close()
         conn.close()
@@ -89,9 +87,9 @@ def removeEntry(firstname, lastname):
         conn = dbi.connect(dsn=None, database='*LOCAL', user=None, password=None)
         db2 = conn.cursor()
         print('Showing firstname in remove: ' + str(firstname))
-        db2.execute("DELETE FROM RBJ73_T.BLOGDATA WHERE FIRSTNAME = ? AND LASTNAME = ?",(firstname, lastname))
+        db2.execute("DELETE FROM YOUR_DBNAME.BLOGDATA WHERE FIRSTNAME = ? AND LASTNAME = ?",(firstname, lastname))
         conn.commit()
-        db2.execute('Select * from RBJ73_T.BLOGDATA')
+        db2.execute('Select * from YOUR_DBNAME.BLOGDATA')
         result = db2.fetchall()
         db2.close()
         conn.close()
@@ -130,7 +128,7 @@ table {
 }
 
 .tableContainer {
-	width: 60%;
+    width: 60%;
     padding-left: 20%;
 }
 
@@ -149,7 +147,7 @@ td {
 }
 
 .removeUser {
-	background-color: red;
+    background-color: red;
 }
 
 </style>   
@@ -180,13 +178,13 @@ td {
 
 <div class="removeContainer">
 <form action="/removeUser" method='POST'>
-    
+
     <label><b>First Name:</b></label>
     <input type="text" placeholder="First Name" name="firstname" required>
-    
+
     <label><b>Last Name:</b></label>
     <input type="text" placeholder="Last Name" name="lastname" required>
-    
+
     <button type="submit" class="removeUser">Remove User Record</button>
 
 </form>
@@ -195,7 +193,7 @@ td {
 </html>
 ```
 
-newUser.html: 
+newUser.html:
 
 ```
 <html>
@@ -208,12 +206,12 @@ html {
 }
 
 body {
-	margin-top: 10%;
+    margin-top: 10%;
     display: inline-block;
 }
 
 .inputContainer {
-	width: 50%;
+    width: 50%;
     padding-left: 25%;
 }
 
@@ -223,12 +221,12 @@ input[type=text] {
 }
 
 textarea {
-	margin-bottom:1%;
+    margin-bottom:1%;
     width: 100%;
 }
 
 .cancelBtn {
-	background-color: red;
+    background-color: red;
 }
 
 </style>   
@@ -236,22 +234,22 @@ textarea {
 <body>
 <div class="inputContainer">
     <form action="/newWatsonDeveloperProfile" method=post>
-   
+
         <label><b>First Name:</b></label>
         <input type="text" placeholder="First Name" name="firstname" required>
-    
+
         <label><b>Last Name:</b></label>
         <input type="text" placeholder="Last Name" name="lastname" required>
-        
+
         <label><b>Title:</b></label>
         <input type="text" placeholder="Job Title" name="title" required>
- 
+
         <label><b>Data to Analyze:</b></label>
         <textarea rows="8" required
-    					placeholder="Please enter the text to analyze (minimum of 100 words)..."
-    					name='data'>
-    	</textarea>
-    	<button type="submit" class="btn">Submit</button>
+                        placeholder="Please enter the text to analyze (minimum of 100 words)..."
+                        name='data'>
+        </textarea>
+        <button type="submit" class="btn">Submit</button>
     </form>
 </div>
 <br></br>
