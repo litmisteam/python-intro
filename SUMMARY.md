@@ -27,6 +27,6 @@
 * [Step 5: DB2 Access](python-development/step-5-db2-access.md)
 * [Step 6: Watson - SpeechToText](python-development/step-6-watson-speechtotext.md)
 * [Step 7: Watson - Personality Insights](python-development/step-7-watson-personality-insights.md)
-* [Step 8: Watson - Conversation](python-development/step-8-watson-conversation.md)
+* [Step 8: Watson Assistant \(formerly Conversation\)](python-development/step-8-watson-conversation.md)
 * [Python References](python-development/python-references.md)
 

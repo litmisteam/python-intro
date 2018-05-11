@@ -1,4 +1,4 @@
-# Step 8: Watson - Conversation
+# Step 8: Watson Assistant \(formerly Conversation\)
 
 In this section we will be using the Watson Developer Cloud Conversation API's to interface with Watson and
 
@@ -6,8 +6,8 @@ In this section we will be using the Watson Developer Cloud Conversation API's t
 
 1. Create a Bluemix account to gain access to a mix of Watson API's as well as a variety of other services: [Bluemix](https://www.ibm.com/cloud-computing/bluemix/)
 2. Go to your dashboard page on Bluemix and select 'Create Service'![](../.gitbook/assets/bluemixservices.PNG)
-3. Create the Conversation Watson service and return to the 'dashboard' page. From there, scroll down to your newly created Conversation service offering and select it. 
-4. In the Conversation listing, go to the Service Credentials tab and take note of your username and password, these will be needed to access the service later. 
+3. Create the Watson Assistant service and return to the 'dashboard' page. From there, scroll down to your newly created Conversation service offering and select it. 
+4. In the Assistant listing, look at the Credentials section and take note of your username and password \(you may have to click "Show" to the top right\). These will be needed to access the service later. 
 
 ## Watson Developer Cloud
 
