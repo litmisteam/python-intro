@@ -1,6 +1,6 @@
-# Using the Python Interpreter
+# Step 1: Python Interpreter
 
-#### Background: Interpreted vs. Compiled
+### Background: Interpreted vs. Compiled
 
 Python is often thought of as an interpreted language, but like other relatively modern "scripting languages" \(such as Perl and Ruby\) your source code is actually _compiled_ to an intermediate form before being executed by the interpreter. The intermediate form used by Python is called _bytecode_, and it's the same approach used by Java. But unlike Java, which has an explicit command \(`javac`\) for compiling source code into bytecode, Python compiles automatically as needed, which is one reason it _feels_ interpreted.
 
@@ -8,13 +8,13 @@ Another way in which Python feels as though it's interpreted directly, in classi
 
 Below, you can jump right into a brief introduction of Python's interactive mode if you are inclined to do so! If you're comfortable with Python at this point, you might find it more useful to jump ahead to Step 2, and just refer back to Step 1 or the Python Overview when you encounter something unfamiliar.
 
-#### Running the Interpreter in Interactive Mode
+### Running the Interpreter in Interactive Mode
 
 To enter Python's interactive mode, simply type the command 'python3' with no parameters, at which point you should be brought to a new line beginning with `>>>`. This prompt \(which can be personalized\) signals that the interpreter is accepting interactive Python code. To leave the interpreter and return to the regular command shell, simply type `quit()` or `exit()` or press 'Ctrl+D'. \(Note that if you're trying this in Windows, the key combo to exit is 'Ctrl+Z'.\)
 
 So, let's try it out:
 
-```
+```text
 [usr3ouav@SPACES]~% python3 --version
 Python 3.4.4
 [usr3ouav@SPACES]~% python3
@@ -29,7 +29,7 @@ Above you see the shell command 'python3 --version' that behaves predictably, li
 
 The 'python3' entry into the shell provided some details regarding our current distribution of Python and then entered interactive mode. Below that you can see some simple arithmetic being handled by the interpreter as well as an in-line comment signaled by the '\#' sign.
 
-```
+```text
 >>> # Anything following the '#' sign on the same line will be a comment
 ... # the '...' prompt at the beginning of the line indicates a multi-line entry
 ... not_a_comment = '# this is not a comment because it is inside quotations'                  
@@ -39,7 +39,7 @@ The 'python3' entry into the shell provided some details regarding our current d
 
 Again going off the picture above, you can see one of the limitations to the comment sign indicator that should be noted. Place comments outside quotations to ensure their reliability.
 
-```
+```text
 >>> somevariable                                 
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -56,7 +56,7 @@ Aaron Rodgers is their quarterback.
 
 The first thing you see me do in this example is access an undefined variable. Attempting to do so should return the NameError response. Next, a Boolean value is set and then used in a multi-line 'if' statement. Not only does this snippet provide useful information about the 'if' statement syntax, it also illustrates the whitespace requirements of Python. The statement within the 'if' is given four leading spaces to identify it as a part of the 'if' block.
 
-```
+```text
 >>> # Fibonacci Series:
 ... # The sum of two elements defines the next.
 ... a, b = 0, 1 # Python supports dual assignment!                
@@ -74,7 +74,7 @@ The first thing you see me do in this example is access an undefined variable. A
 
 Moving on to more complicated topics, we have the Fibonacci Series defined above. This particular implementation illustrates the use of dual assignment on a single line. The 'while' statement in the code above is similar to the 'if' statement used previously in that they both must be delineated with whitespace instead of brackets or begin/end keywords as used by other popular languages.
 
-```
+```text
 >>> def fib(n):
 ...     # fib(n) will print a Fibonacci series up to n.
 ...     a, b = 0, 1
@@ -91,7 +91,7 @@ Moving on to more complicated topics, we have the Fibonacci Series defined above
 
 Bringing the Fibonacci Series algorithm into the future by defining it as a function with a single input instead of a single 'while' loop. This differs from the previous implementation as the new version now enables us to call the code an indefinite number of times throughout our program. You might be able to envision the power of such a construct and if you have any experience coding in another language, you probably have an immense appreciation for the power this provides developers.
 
-```
+```text
 [usr3ouav@SPACES]~% pip3 install yahoo_finance
 Requirement already satisfied: yahoo_finance in /QOpenSys/QIBM/ProdData/OPS/Python3.4/lib/python3.4/site-packages
 Requirement already satisfied: simplejson in /QOpenSys/QIBM/ProdData/OPS/Python3.4/lib/python3.4/site-packages (from yahoo_finance)
@@ -123,7 +123,7 @@ Within the interpreter you then see me utilize the yahoo\_finance library to fet
 
 To view a more in depth list of 'pip' commands simply enter 'pip3' into the command prompt to display an output as shown:
 
-```
+```text
 [usr3ouav@SPACES]~% pip3 
 
 Usage:   
@@ -166,6 +166,4 @@ General Options:
 ```
 
 ## Please proceed to the next step. {#_please_proceed_to_the_next_step}
-
-
 

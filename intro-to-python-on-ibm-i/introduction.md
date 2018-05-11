@@ -1,6 +1,6 @@
 # Introduction
 
-![](.gitbook/assets/python_logo_trans.png)
+![](../.gitbook/assets/python_logo_trans.png)
 
 `print('Intro To Python on IBM i')`
 

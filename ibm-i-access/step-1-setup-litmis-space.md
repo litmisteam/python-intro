@@ -1,6 +1,8 @@
-# Tutorial Environment
+# Step 1: Setup Litmis Space
 
-## Setup a LITMIS Space
+## Tutorial Environment
+
+### Setup a LITMIS Space
 
 Now that you know a little about PASE it’s time to setup your lab on an IBM i in the cloud. Labs are conducted on [**Litmis Spaces**](https://kti.news/2iMWsjL)** Multi Tenant**; a service from Krengeltech to provide preconfigured open source environments on IBM i cloud instances.
 
@@ -18,25 +20,22 @@ Once logged in you can create a new space, as shown below.
 
 ![](https://litmis.gitbooks.io/pase-intro/content/assets/litmis_signup2.5.png)
 
-You will be presented with the below pop-up. Give a name to this space, enter the promo code of **BETA**, select the `minimal` radio button, and click the **Create** button.![](/assets/pythonFlavorLitmisSetup.png)Now you should see a new box on your page that represents your newly created Space \(demo picture Space was named 'ExampleSpace' instead of 'pythonIntro' as shown in the above setup\).
+You will be presented with the below pop-up. Give a name to this space, enter the promo code of **BETA**, select the `minimal` radio button, and click the **Create** button.![](../.gitbook/assets/pythonflavorlitmissetup.png)Now you should see a new box on your page that represents your newly created Space \(demo picture Space was named 'ExampleSpace' instead of 'pythonIntro' as shown in the above setup\).
 
-![](/assets/exampleLitmisWorkspacesPage.PNG)
+![](../.gitbook/assets/examplelitmisworkspacespage.PNG)
 
 There are four buttons which constitute actions you can take with your Space. They are \(left to right\):
 
 * **Shell prompt.** You will use this to enter commands in the PASE \(see the PASE tutorial at [https://www.gitbook.com/book/litmis/pase-intro/details](https://www.gitbook.com/book/litmis/pase-intro/details) for more details\) environment on the IBM i.
-
 * **Editor.** Where you will edit your source code and navigate the IFS \(Integrated File System\).
-
 * **Space Information.** Here you will find information about your space such as user profile, database schemas \(aka libraries\), ports for your web app to listen, Space id, etc.
-
 * **Delete Space. WARNING!** If you select this option and the subsequent warning prompt, your Space will be deleted. This **CANNOT** be undone.
 
-# Environment Variables
+## Environment Variables
 
-Each environment has specific settings that are stored in PASE environment variables.  They are as follows.  When you log into a PASE shell these are automatically set for you.  You should not modify these values.
+Each environment has specific settings that are stored in PASE environment variables. They are as follows. When you log into a PASE shell these are automatically set for you. You should not modify these values.
 
-```
+```text
 export LITMIS_SPACE_GUID=xxxx
 export LITMIS_SPACE_USER=USRxxxxx
 export LITMIS_SCHEMA_DEVELOPMENT=xxxxx_D
@@ -47,7 +46,5 @@ export LITMIS_PORT_TEST=22222
 export LITMIS_PORT_PRODUCTION=33333
 ```
 
-## Please proceed to the next step. {#_please_proceed_to_the_next_step}
-
-
+### Please proceed to the next step. {#_please_proceed_to_the_next_step}
 

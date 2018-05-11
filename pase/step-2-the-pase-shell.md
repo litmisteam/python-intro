@@ -1,4 +1,4 @@
-# The Shell {#the-shell}
+# Step 2: The PASE Shell
 
 You access PASE using what’s called a _shell_. The [PASE](https://kti.news/pase-v73) shell is a lot like a 5250 Telnet session; it’s a program that takes your commands from the keyboard and hands them to the operating system to perform their associated action. It is also known as a CLI \(Command Line Interface\).
 
@@ -20,7 +20,7 @@ If you’ve been on the IBM i for any amount of time you’ve probably been expo
 
 The primary difference between these two environments is that Qshell is based on the ILE environment and QP2TERM is based on AIX. For 99% of what you do you will stay away from Qshell because it doesn’t operate correctly in certain circumstances. The few scenarios you will use it involve starting a shell script from a 5250 session; but it will in turn enter into a real PASE shell.
 
-```
+```text
 SBMJOB CMD(QSH CMD('/path/to/script.sh parm1 parm2'))
 ```
 
@@ -35,12 +35,10 @@ Instead what you should be using is a more feature rich shell, like `bash`. The 
 **Why is Bash better?**
 
 * **Tab key to complete.** Instead of fully typing a directory or file name you can hit the tab key and it will auto complete it.
-
 * **Short-cut keys.** For example, Ctrl+A and Ctrl+E go to the beginning and end of the current line, respectively.
-
 * **Custom Prompt.** Bash allows you to customize your prompt to include things like the current directory and the current user, e.g. `[aaron@SPACES]/home/aaron/git$`
 
-The other thing you need to know is that, while Bash works in QP2TERM, it is fairly crippled there. For example, the tab-to-complete and short-cut keys don’t work in QP2TERM because it isn’t what is called a teletypewriter \(TTY\) terminal. For that matter, a lot of basic functionality in ksh or any other Unix-style shell is unavailable without a TTY terminal. To get such a terminal we need to start the `*SSHD` \(SSH Daemon\)\[[1](https://litmis.gitbooks.io/pase-intro/content/step-2-the-shell.html#_footnote_1)] server and then use a client-side program \(on the desktop\) to connect to a Bash shell on IBM i.
+The other thing you need to know is that, while Bash works in QP2TERM, it is fairly crippled there. For example, the tab-to-complete and short-cut keys don’t work in QP2TERM because it isn’t what is called a teletypewriter \(TTY\) terminal. For that matter, a lot of basic functionality in ksh or any other Unix-style shell is unavailable without a TTY terminal. To get such a terminal we need to start the `*SSHD` \(SSH Daemon\)\[[1](https://litmis.gitbooks.io/pase-intro/content/step-2-the-shell.html#_footnote_1)\] server and then use a client-side program \(on the desktop\) to connect to a Bash shell on IBM i.
 
 Once the `*SSHD` TCP server is started you can then connect to it using a terminal client, as shown below on Windows using [Git Bash](https://kti.news/gitbash-for-windows).
 
@@ -53,8 +51,4 @@ Or on a Mac using [iTerm2](https://www.iterm2.com).
 Stay tuned for how you’ll access the PASE shell for this lab.
 
 ## Please proceed to the next step. {#_please_proceed_to_the_next_step}
-
----
-
-
 

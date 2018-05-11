@@ -1,20 +1,20 @@
-# Routing Introduction
+# Step 3: Routing Introduction
 
 Welcome to the advanced section of the Python development with Bottle tutorial. In this section we will be taking a closer look at a variety of Bottle concepts including advanced routing techniques, server modification, and the Bottle Simple Template engine to name a few.
 
-#### Routing
+### Routing
 
 Bottle provides requests to function-call mapping with support for clean and dynamic URLs to prevent congestion on your web application. Routing is a complex process and Bottle seeks to simplify this complexity by adding clearly defined routing capabilities, wildcards, wildcard filters, and response objects to name a few. This section is dedicated to the routing capabilities Bottle has to offer.
 
 To start our inspection of Bottle's routing capabilities we first need to create a new file to store our routing endeavors. This time, unlike in our previous example, we are going to create the files we need within the code editor.
 
-![](/assets/workspaceFilesFileCreation.png)
+![](../.gitbook/assets/workspacefilesfilecreation.png)
 
 From your file tree as shown above, right click on your user name \(the highest level directory\) and select 'new folder'. Name this folder 'Templates' as it will be storing our HTML and CSS files that we will use to produce clean HTTP responses. You should also right click on your 'bottleLearning' file from Step 2: Learn Python with Bottle and create a file named bottleWildcards.py.
 
 Once you've got the 'bottleWildcards.py' file made, go ahead and paste the following code into the file.
 
-```
+```text
 from bottle import route, run, template, static_file
 
 
@@ -31,7 +31,7 @@ Beyond the routing concepts there is another construct readers may not yet be fa
 
 The code above still needs to have the \(proper\) root variable assigned to tell Bottle where to look for the static file with the given filename. To do so, enter the command line interface and run the following commands to get a listing of your root directory. If you are using Litmis Spaces to follow along for this lab, it should be '/home/yourUserName'. Enter the value returned by the pwd \(print working directory\) command issued at the root of your file system and add the '/Templates/' extension to finish the root variable specification. It should look something like the example code snippet above once fully specified.
 
-```
+```text
 [usr3ouav@SPACES]~/bottleLearning% cd
 [usr3ouav@SPACES]~% pwd
 /home/USR3OUAV
@@ -39,7 +39,7 @@ The code above still needs to have the \(proper\) root variable assigned to tell
 
 To make proper use of the static\_file\(\) method, we need to create a file that it can render. Create a file in the 'Templates' folder within your root directory and name it 'wildcardSample.html'. This is what bottle will render for us when called to do so with the proper URL entry. Enter the following lines of HTML, or whatever HTML you would prefer to receive as a response from our callback function, and save the file under the 'wildcardSample.html' file that was just created.
 
-```
+```text
 <!DOCTYPE HTML>
 
 <html lang="en-US">
@@ -64,7 +64,7 @@ To make proper use of the static\_file\(\) method, we need to create a file that
 
 To run this code, jump over to your CLI \(command line interface\) and run the bottleWildcards.py file after you have saved it as we did earlier and as shown below:
 
-```
+```text
 [usr3ouav@SPACES]~% ls
 New Folder           bottle_Files         cloud9_server.pid    htmlstyle_Files      mako_Files
 Templates            bottle_jinja_cherry  core                 ibm_db_Files
@@ -80,11 +80,11 @@ Hit Ctrl-C to quit.
 
 After we have our server running, we need to use the correct routing configuration to get a proper response from our application.
 
-![](/assets/wildcardRoutingStaticFileBottle.png)
+![](../.gitbook/assets/wildcardroutingstaticfilebottle%20%281%29.png)
 
 As you can see, the added 'wildcardSample.html' wildcard entry is providing us a response as expected. Now, let's make things a little bit more interesting...
 
-```
+```text
 from bottle import route, run, template, static_file
 
 # ... wildcard filter being used below
@@ -104,13 +104,13 @@ You might also have noticed that Bottle even allows us to add filters to our wil
 
 Copy and paste the code snippet from above that includes the second routing decorator and the wildcard filter and restart your server. You should see no difference in the response you get, as we are still rendering the same HTML file, but you should be able to access a response from the server through both of the defined routes.
 
-![](/assets/wildcardRoutingStaticFileBottle.png)
+![](../.gitbook/assets/wildcardroutingstaticfilebottle.png)
 
-![](/assets/secondRouteBottleRouting.png)
+![](../.gitbook/assets/secondroutebottlerouting.png)
 
 Before we move beyond static files and wildcards, I thought it worth illustrating one more out of the box construct of Bottle, the forced file download. Enter the code below and observe the interactions when the proper URL is sent to the browser.
 
-```
+```text
 from bottle import route, run, template, static_file
 
 # ... wildcard filter being used below
@@ -133,7 +133,7 @@ The HTTP protocol defines several methods for different response tasks. In Bottl
 
 Let's see this in action, create a new file in the 'bottleLearning' folder on your IFS and name it 'protocolMethods.py'. Within this file enter the following code block:
 
-```
+```text
 from bottle import run, get, post, request # or route
 
 @get('/login') # or @route('/login')
@@ -158,21 +158,21 @@ def do_login():
 run(host='spaces.litmis.com', port=62368)
 ```
 
-This code block illustrates the different ways you can use the routing mechanisms in Bottle. Notice the '\#' comment lines that define alternative route decorators for the non-commented versions provided. If you are unfamiliar with some of the syntax here, that is okay. What you should really be taking from this example is the use of the @get and @post route decorators and what they imply. In the @get block, we see an odd return value starting with triple quotes, which is simply an HTML form embedded in our Python code with the '''  ''' tags surrounding it. This form takes a Username and Password as input values, and when submitted, it generates the @post response based on these values.
+This code block illustrates the different ways you can use the routing mechanisms in Bottle. Notice the '\#' comment lines that define alternative route decorators for the non-commented versions provided. If you are unfamiliar with some of the syntax here, that is okay. What you should really be taking from this example is the use of the @get and @post route decorators and what they imply. In the @get block, we see an odd return value starting with triple quotes, which is simply an HTML form embedded in our Python code with the ''' ''' tags surrounding it. This form takes a Username and Password as input values, and when submitted, it generates the @post response based on these values.
 
 Once the @get values are submitted, the @post request responds due to the 'method="post"' declaration in the HTML form. It knows when to respond due to the call from the get routes 'action="/login"' line. To retrieve the values from the form the 'request.forms.get\(\)' method is used with the appropriate input names provided as parameters. This finds the form values entered by the user and extracts them from the form.
 
-Run the @get and @post code snippet and see if you can follow the flow of the application in action.  It should produce the following output:
+Run the @get and @post code snippet and see if you can follow the flow of the application in action. It should produce the following output:
 
-![](/assets/bottleFormUseExample.png)
+![](../.gitbook/assets/bottleformuseexample.png)
 
 What response do you think you will receive when you fill in the form and submit it with the login button?
 
-![](/assets/undefinedMethodResponseError.png)
+![](../.gitbook/assets/undefinedmethodresponseerror.png)
 
 We receive this response because we never defined the check\_login\(username, password\) function! Let's change a few things and see if we can get a response.
 
-```
+```text
 from bottle import get, post, request, run # or route
 
 @get('/login') # or @route('/login')
@@ -209,9 +209,7 @@ However, this was not the only other change, I also added the 'reloader = True' 
 
 Running the above code will produce the following output if you enter 'Eric' as the username. Because of the form values provided, Google Chrome will even respond and ask you to save your login information for this site if you're using that particular browser. Though I haven't tested them, I would assume other browsers respond in kind.
 
-![](/assets/loginSuccessBottleExamples.png)
+![](../.gitbook/assets/loginsuccessbottleexamples.png)
 
 ## Please proceed to the next step. {#_please_proceed_to_the_next_step}
-
-
 

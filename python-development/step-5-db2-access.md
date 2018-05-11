@@ -2,7 +2,7 @@
 
 In this section we will be using the `ibm_db_dbi` library to connect to the local database associated with the IBM i system and enact changes on the contents of this database. This section is meant to prepare us for a more in depth discussion of the Watson Cognitive API and its use on the IBM i system.
 
-#### Database Access
+## Database Access
 
 To begin our look at how we can access the native database included in our IBM i system, we need to import the proper library using the 'pip install' \(or pip3 install\) command.
 
@@ -10,7 +10,7 @@ I have decided to put up some code illustrating the use of the native DB2 databa
 
 NOTE: You will need to change the port number to that of your own space, the file paths throughout the code to match your own space, as well as the name of the database used in the query strings below to your own \(mine is RBK73\_R and this can be found under your space information from the 'workspaces' pane on Litmis Spaces\).
 
-```
+```text
 from bottle import *
 import ibm_db_dbi as dbi
 
@@ -55,6 +55,7 @@ def showTheDatabase():
                                              TITLE VARCHAR(1000) ALLOCATE(20) CCSID 1208, \
                                              THEDATA VARCHAR(30739) CCSID 1208)"
         db2.execute(sql)
+        db2.commit()
         db2.execute("SELECT * FROM YOUR_DBNAME.BLOGDATA FOR READ ONLY")
         result = db2.fetchall()
         db2.close()
@@ -107,7 +108,7 @@ The following files will also be needed to allow the application to run. If you 
 
 make\_table.tpl :
 
-```
+```text
 %#template to generate a HTML table from a list of tuples (or list of lists, or tuple of tuples or ...)
 <html>
 <head>
@@ -195,7 +196,7 @@ td {
 
 newUser.html:
 
-```
+```text
 <html>
 <head>
     <title>Developer Data Entry</title>
@@ -261,6 +262,4 @@ textarea {
 </body>
 </html>
 ```
-
-
 

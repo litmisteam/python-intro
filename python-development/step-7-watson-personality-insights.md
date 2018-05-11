@@ -1,24 +1,24 @@
 # Step 7: Watson - Personality Insights
 
-In this section we will be using the Watson Developer Cloud Personality Insights API's to interface with Watson and asses an individuals personality based on a selection of text stored on the native DB2 offering, a excerpt of text pasted in via the user, or through the timeline of an individuals Twitter page given their associated handle. This has a vast array of use cases from low-level consumer trend information \(given a certain personality what are they most likely to buy and when\) as well as higher-order tasks such as AI interaction modifications given detected personality insights found within the context of a single interaction or over the course of many. To get started, you will first need access credentials associated with your chosen Watson API to allow Watson to identify you and service your requests. 
+In this section we will be using the Watson Developer Cloud Personality Insights API's to interface with Watson and asses an individuals personality based on a selection of text stored on the native DB2 offering, a excerpt of text pasted in via the user, or through the timeline of an individuals Twitter page given their associated handle. This has a vast array of use cases from low-level consumer trend information \(given a certain personality what are they most likely to buy and when\) as well as higher-order tasks such as AI interaction modifications given detected personality insights found within the context of a single interaction or over the course of many. To get started, you will first need access credentials associated with your chosen Watson API to allow Watson to identify you and service your requests.
 
-#### Watson Access
+## Watson Access
 
 1. Create a Bluemix account to gain access to a mix of Watson API's as well as a variety of other services: [Bluemix](https://www.ibm.com/cloud-computing/bluemix/)
-2. Go to your dashboard page on Bluemix.![](/assets/dashOnly.png)
-3. Select 'Create Service'. ![](/assets/blueMixServices.PNG)
+2. Go to your dashboard page on Bluemix.![](../.gitbook/assets/dashonly.png)
+3. Select 'Create Service'. ![](../.gitbook/assets/bluemixservices.PNG)
 4. Create the Personality Insights Watson service and return to the 'dashboard' page. From there, scroll down to your newly created Personality Insights service offering and select it. 
-5. In the Personality Insights listing, go to the Service Credentials tab and take note of your username and password, these will be needed to access the service later. ![](/assets/viewCredentials.PNG)
+5. In the Personality Insights listing, go to the Service Credentials tab and take note of your username and password, these will be needed to access the service later. ![](../.gitbook/assets/viewcredentials.PNG)
 
-#### Watson Developer Cloud
+## Watson Developer Cloud
 
 At this point your almost ready to start assessing people's souls. Log in to your Python enabled Litmis Space and using the proper 'pip' version install the watson-developer-cloud library. At this point, you actually have a variety of Watson service API's ready for you to make use of including but not limited to Personality-Insights, Conversation, TextToSpeech, SpeechToText and many more. For many of these offerings, you will also need the 'json' Python library as Watson likes to send JSON response objects through many of the API calls.
 
-For this particular Watson sample we are going to be using a slightly different library than the normal watson-developer-cloud python-sdk as we normally would. We are going to make use of the more dated yet still useful personality-insights-python sub directory of the watson-developer-cloud suite \(instead of the watson-developer-cloud/pthon-sdk/personality-insights library\). While this is a minor distinction it should be noted especially if you plan to return to he personality insights service as you may find it more beneficial to use the python-sdk tool kit to perform some of the requests made to the personality insights service as shown below. 
+For this particular Watson sample we are going to be using a slightly different library than the normal watson-developer-cloud python-sdk as we normally would. We are going to make use of the more dated yet still useful personality-insights-python sub directory of the watson-developer-cloud suite \(instead of the watson-developer-cloud/pthon-sdk/personality-insights library\). While this is a minor distinction it should be noted especially if you plan to return to he personality insights service as you may find it more beneficial to use the python-sdk tool kit to perform some of the requests made to the personality insights service as shown below.
 
-The following server.py example code uses a variety of APIs interchangeably to enable users access to a variety of text sources for interpretation by the Watson Personality Insights Service. 
+The following server.py example code uses a variety of APIs interchangeably to enable users access to a variety of text sources for interpretation by the Watson Personality Insights Service.
 
-```
+```text
 #
 # Copyright 2014 IBM Corp. All Rights Reserved.
 #
@@ -103,7 +103,7 @@ class DemoService(object):
     This class implements the handler API for cherrypy library.
     """
     exposed = True
-    
+
     #Signifies the private contents of this class (only demoservice members can use these methods)
     def __init__(self, service):
         self.service = service
@@ -120,7 +120,7 @@ class DemoService(object):
     def GET(self):
         """Shows the default page with sample text content"""
         return lookup.get_template("index.html").render(content=self.defaultContent)
-    
+
     #@cherrypy.tools.json_in()
     def POST(self, text=None, firstname=None, lastname=None, twittername=None, fullname=None):
         if twittername != '':
@@ -165,14 +165,14 @@ def queryTwitter(twitterID):
     ACCESS_SECRET = 'FoQkkImWgUNMm4MbzjfuJz3xDd8zxSd9rBMSTsmjA9oRl'
     CONSUMER_KEY = '2fEnyoMPjfNMrBjRIxTq9mLuV'
     CONSUMER_SECRET = 'JbGBXgR0VM2SiXHt1EwmxUaqsrSTCfn9RGMV2ddET1POp1FmRD'
-    
+
     #declare authorization credentials listed above to the Twitter service
     oauth = OAuth(ACCESS_TOKEN, ACCESS_SECRET, CONSUMER_KEY, CONSUMER_SECRET)
     twitter = Twitter(auth=oauth)
     #retrieve the given useres status history
     statusDict = twitter.statuses.user_timeline(screen_name=twitterID, count = 100, exclude_replies = True, charset='utf8')
     theTextArray = []
-    
+
     #Ensure the proper encoding 
     for line in statusDict:
         text = line['text']
@@ -243,8 +243,5 @@ if __name__ == '__main__':
     # Start the server
     print("Listening on %s:%d" % (HOST_NAME, PORT_NUMBER))
     cherrypy.quickstart(DemoService(personalityInsights), "/", config=conf)
-
 ```
-
-
 

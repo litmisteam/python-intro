@@ -1,6 +1,6 @@
 # Python References
 
-### The following links provide a variety of useful information for development in the Python programming language.
+## The following links provide a variety of useful information for development in the Python programming language.
 
 Python Downloads: [https://www.python.org/downloads/](https://www.python.org/downloads/)
 

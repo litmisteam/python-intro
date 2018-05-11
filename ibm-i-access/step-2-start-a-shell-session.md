@@ -1,4 +1,4 @@
-# Start A Shell Session {#start-a-shell-session}
+# Step 2: Start a Shell Session
 
 Starting a shell session on Litmis Spaces is simple. Simply select the below button and a new browser tab will open.
 
@@ -23,6 +23,4 @@ The Zsh shell allows us to configure what the prompt contains. In this case it f
 For brevity sake this lab will use `~%` for the shell prompt from here on out.
 
 ## Please proceed to the next step. {#_please_proceed_to_the_next_step}
-
-
 
