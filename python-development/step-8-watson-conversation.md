@@ -11,7 +11,18 @@ In this section we will be using the Watson Developer Cloud Conversation API's t
 
 ## Watson Developer Cloud
 
-At this point your almost ready to start translating. Log in to your Python enabled Litmis Space and using the proper 'pip' version install the watson-developer-cloud library. At this point, you actually have a variety of Watson service API's ready for you to make use of including but not limited to Personality-Insights, Conversation, TextToSpeech, SpeechToText and many more. For many of these offerings, you will also need the 'json' Python library as Watson likes to send JSON response objects through many of the API calls.
+At this point your almost ready to start translating. Log in to your Python enabled Litmis Space install the required watson developer cloud package:
+
+```text
+~% pip3 install watson_develper_cloud
+```
+
+{% hint style="info" %}
+The above command appears to currently be broken \(May 11, 2018\). It produces a python error of:  
+Command "python setup.py egg\_info" failed with error code 1 in /tmp/pip-install-\_wdsw6wx/cffi/   
+{% endhint %}
+
+At this point, you actually have a variety of Watson service API's ready for you to make use of including but not limited to Personality-Insights, Conversation, TextToSpeech, SpeechToText and many more. For many of these offerings, you will also need the 'json' Python library as Watson likes to send JSON response objects through many of the API calls.
 
 As my time is limited, today I am only going to paste the code that illustrates the service running. At another date I plan to return to this section and add more details into how this is done as well as what modifications can be made to the service calls to affect the results Watson returns to us.
 
