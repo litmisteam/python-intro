@@ -18,20 +18,14 @@ Successfully installed bottle-0.12.13
 [usr3ouav@SPACES]~%
 ```
 
-If you're unsure of the installation enter the pip3 list command into your shell to view your installed Python modules \(beyond the Python standard library\).
+If you're unsure of the installation enter the pip3 list command into your shell to view your installed Python modules \(beyond the Python standard library\). You will likely only have a subset of this list, as it only lists what you have installed. 
 
 ```text
 [usr3ouav@SPACES]~% pip3 list
 DEPRECATION: The default format will switch to columns in the future. You can use --format=(legacy|columns) (or define a format=(legacy|columns) in your pip.conf under the [list] section) to disable this warning.
 appdirs (1.4.0)
 bottle (0.12.13)
-CherryPy (8.9.1)
-Django (1.10.5)
-django-ipware (1.1.6)
 ibm-db (2.0.5.4)
-Jinja2 (2.9.4)
-MarkupSafe (0.23)
-nltk (3.2.2)
 packaging (16.8)
 pip (9.0.1)
 pyparsing (2.1.10)
@@ -41,11 +35,10 @@ simplejson (3.10.0)
 six (1.10.0)
 textblob (0.11.1)
 wheel (0.29.0)
-yahoo-finance (1.4.0)
 [usr3ouav@SPACES]~%
 ```
 
-To set up our Bottle project we can take a number of routes. We could either enter a Python interpreter and run a short segment of code to see it in action, or we could put this short piece of code in a file and execute the file through the shell interface. Furthermore, we can either go to the code editor to create the files we will need, or we can do so through the shell. First, I will illustrate how we can create the file we need to run with shell commands, and then I'll demonstrate an alternative via the code editor. Enter the following commands in your shell interface and review the responses.
+To set up our Bottle project we can take a number of routes. We could either enter a Python interpreter and run a short segment of code to see it in action, or we could put this short piece of code in a file and execute the file through the shell interface. Furthermore, we can either go to the code editor to create the files we will need, or we can do so through the shell. First, I will illustrate how we can create the file we need to run with shell commands, and then I'll demonstrate an alternative via the code editor. Enter the following commands in your shell interface and review the responses. \(the sample text below may contain files you do not have yet, if you have never used your Litmis Space before\)
 
 ```text
 [usr3ouav@SPACES]~% ls

@@ -1,5 +1,9 @@
 # Step 4: SimpleTemplate
 
+**SKIP THIS STEP!! Proceed to Step 5!!**
+
+
+
 The goal of Step 4 in this tutorial is to introduce the audience to much more complex Bottle topics while also digging deeper into concepts introduced in previous steps. We will focus on both more in depth template usage as well as interactions with the Bottle template interface while working with the yahoo-finance module to produce a ticker lookup system that returns information about a company associated with a valid user entered ticker string. While this is not meant to make you an expert on template usage, it may help incoming or prospective Bottle/Litmis Space users better understand the core functionality of the API and how to implement it.
 
 ### Templates
