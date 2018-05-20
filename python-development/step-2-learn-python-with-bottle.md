@@ -90,7 +90,7 @@ from bottle import route, run, template
 def index(name):
     return template('<b>Hello {{name}}</b>!', name=name)
 
-run(host='localhost', port=8080)
+run(host='0.0.0.0', port=8080)
 ```
 
 These lines represent one of the most basic Bottle structures you can engineer, and when run, should start the built in Bottle server on the given host at the provided port number that serves HTTP GET requests with the appropriate routing as defined in the '@route' attribute parameters. However, for our purposes we are going to need to update the host and port parameters in the run command with our personal Litmis Space information. To find this information navigate to the Litmis Spaces workspaces page and select the 'More Info' icon.
@@ -110,7 +110,7 @@ from bottle import route, run, template
 def index(name):
     return template('<b>Hello {{name}}</b>!', name=name)
 
-run(host='spaces.litmis.com', port=62368)
+run(host='0.0.0.0', port=62368)
 ```
 
 Make sure you save the 'firstBottleExample.py' file by selecting 'File' and 'Save' from your code editor or simply use the 'ctrl-s' hotkey to update the IFS \(Integrated File System\) for your space. If you haven't saved your file since your last edit the code editor interface will display an '\*' symbol next to the name of your file at the top of your display. After saving, we are now ready to execute this code and start hosting our application at the given host and port address. Head over to the shell interface and enter the following to execute your 'firstBottleExample.py' code:

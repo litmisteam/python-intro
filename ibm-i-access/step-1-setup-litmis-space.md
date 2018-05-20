@@ -4,7 +4,7 @@
 
 ### Setup a LITMIS Space
 
-Now that you know a little about PASE it’s time to setup your lab on an IBM i in the cloud. Labs are conducted on [**Litmis Spaces**](https://kti.news/2iMWsjL)** Multi Tenant**; a service from Krengeltech to provide preconfigured open source environments on IBM i cloud instances.
+Now that you know a little about PASE it’s time to setup your lab on an IBM i in the cloud. Labs are conducted on [**Litmis Spaces**](https://kti.news/2iMWsjL) **Multi Tenant**; a service from Krengeltech to provide preconfigured open source environments on IBM i cloud instances.
 
 **In short, everything can be done through the browser - no need to install a source editor or shell client on your desktop. Happy day!**
 
